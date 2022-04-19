@@ -1,18 +1,12 @@
 # Final Project for Intro to Data Science
 
-## Term YYYY
+## Term SP22
 
 Team members: 
 
-- Student 1: [Rei Sanchez-Arias](mailto:rsanchezarias@floridapoly.edu)
-
-- Student 2: [Student name](mailto:student2@floridapoly.edu)
-
-- Student 3: [Student name](mailto:student3@floridapoly.edu)
+- Student 1: [Madison Yonash](mailto:myonash@floridapoly.edu)
 
 
 **Summary**
 
-Our project investigates the main characteristics of popular movies in recent years.
-We will be using the data available at: 
-<https://github.com/reisanar/datasets/blob/master/IMDB_movies.csv> 
+I use a daily journaling app called "Daylio" to track my mood and activities that I have done throughout the day. In 2019, I made the accomplishment of tracking this every single day of the year (with some days having multiple entries). This made me wonder, how has my mood changed over time and if there are any factors that may influence it. This project involves exploratory data analysis using this dataset.
