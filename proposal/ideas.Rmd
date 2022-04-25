@@ -3,16 +3,21 @@ title: "Project Proposal"
 output: html_notebook
 ---
 
-(notice that you can reuse some of the sections below for the final project report)
-
 ## Section 1. Introduction
 
-Include a brief **introduction or motivation** here
+I use a daily journaling app called "Daylio" to track my mood and activities that I have done throughout the day. In 2019, I made the accomplishment of tracking this every single day of the year (with some days having multiple entries). This made me wonder, how has my mood changed over time and if there are any factors that may influence it. 
+I also want to use other data sets with factors that may affect my mood. This includes datasets with information on if mercury is in retrograde (https://github.com/Paris778/Retrograde-Mercury-Dates-Dataset-1990-2020) and weather information in Jacksonville.
 
 ## Section 2. Data Analysis Plan
 
-List any **initial questions** you plan to explore in this project. 
+- What was my average mood?
+- Were there any activities that had a high correlation to certain moods?
+- How was my mood during mercury retrograde? During rainy weeks? During weeks with high/low temperature?
+- Was my mood better or worse during Holidays? 
+- Did the school year and events from the school year affect my mood? Was I happier on breaks or while taking classes?
 
 ## Section 3. Data
 
-Include a brief **description of your dataset** (source, available attributes, format, etc.)
+The data about my mood comes from the app Daylio. Each day, the user is asked to give a mood rating for their day (on a scale from 1-5) of the different "moods" they had added. For example, some of the names I gave my moods included "sick" or "rad." You then can add and select activities that you performed that day. Mine included things like work, soccer games, and if I went shopping. 
+I began working with the data to make it more usable. I used the `recode` function of dplyr in order to give a numerical rating to the mood names to mutate a new variable called `mood_scale`. I also filtered the data to only include data from 2019 to narrow the scope of what I was working with, as this was also the only year where I had observations from every day. I did drop the column that contained my description of what happened that day, but I may reevaluate this choice to see if I choose to include not only the activities I perform but also the description I gave specifically.
+In the analysis, in addition to performing EDA with the data in the dataset, I also wanted to see if I could pull more analysis using other data sets. I found other data sets with things like average temperature and precipitation in Jacksonville (where I lived at the time) as well as some silly ones like when Mercury has been in retrograde. I want to use these to see if I could find any interesting correlation between the numerical representation of my mood and external factors.
