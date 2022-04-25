@@ -1,14 +1,9 @@
-# Data Description: IMDB popular movies data
+# Data Description
 
-(this is an example only. Edit this file as you see fit. It is recommended that you also include a copy of the original data used for this project in this folder - typically in `.csv` format)
+The main file being analyzed is the mood report from Dailyo. A cleaned version of this dataset can be found in this folder under the name `Clean Report`. This dataset is from the app directly.
 
-We use the `IMDB_movies.csv` dataset available at 
-<https://github.com/reisanar/datasets/blob/master/IMDB_movies.csv>
+The data fields for this report include the date of the observation, activities, and the mood scale (numerical value 1-5 that represents how I was feeling numerically). 
 
-This dataset includes information of popular movies on IMDB in the last 10 years. 
+Additionally, datasets with data relating to factors that may affect mood are included in this folder. 
 
-The data fields included are: Title, Genre, Description, Director, Actors, Year, Runtime, Rating, Votes, Revenue, Metascore (score of the movie on the metacritic website)
-
-Below we include some basic statistics for this datasets, including dimensions and range of years ...
-
-(add basic summary if needed. Notice that the information above can be reused for one of the sections for the final project report)
+The set on 

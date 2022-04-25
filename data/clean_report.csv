@@ -1,0 +1,821 @@
+"date","mood","activities","mood_scale"
+2022-01-17,"meh","relax | friends | travel | eat out | gym | nap | bleeding | cooking",3
+2022-01-16,"not meh but should be good","relax | friends | travel | eat out | family | drinkin | bujo | gym | bleeding | cleaning",4
+2022-01-12,"good","bujo | class | admissions | soccer | gym | cleaning",4
+2022-01-11,"good","facetime | class | admissions | gym | cleaning | water for lazzy",4
+2022-01-10,"good","relax | friends | facetime | bujo | admissions | meeting | gym | cooking | cleaning",4
+2022-01-09,"rad","relax | friends | eat out | facetime | gym | cleaning",5
+2022-01-08,"rad","friends | facetime | meeting | gym | cooking | cleaning | dishes",5
+2022-01-07,"not meh but should be good","relax | friends | travel | shopping | admissions | meeting | cleaning",4
+2022-01-02,"meh","relax | cooking",3
+2022-01-01,"good","friends | eat out",4
+2021-09-28,"good","relax | eat out | date | quality time | got food w drew | homework | class | weightlifting | gym | nap",4
+2021-09-23,"good",NA,4
+2021-09-23,"meh","relax | drinkin | homework | test | class | meeting | weightlifting | gym | nap | dishes",3
+2021-09-21,"meh","eat out | homework | hw date | class | meeting | weightlifting | gym | took medication  | water plants | dishes",3
+2021-09-20,"good","travel | date | homework | class | admissions | weightlifting | soccer | gym",4
+2021-09-20,"awful",NA,1
+2021-09-19,"enamorada","relax | eat out | family | date | quality time | admissions | meeting | nap",5
+2021-09-17,"rad","relax | travel | shopping | date | quality time | got food w drew | homework | class | nap | cooking | water for lazzy",5
+2021-09-16,"meh",NA,3
+2021-09-16,"good","travel | homework | test | class | game/meet | soccer | gym | took medication",4
+2021-09-15,"meh","homework | bujo | class | admissions | weightlifting | soccer | gym | cleaning",3
+2021-09-14,"not meh but should be good","friends | eat out | facetime | drinkin | homework | bujo | class | weightlifting | gym | cooking | cleaning | took medication",4
+2021-09-13,"good","date | homework | class | admissions | meeting | weightlifting | soccer | gym",4
+2021-02-09,"good","relax | friends | travel | eat out | facetime | shopping | homework | cleaning",4
+2021-02-08,"meh","relax | friends | facetime | homework | bujo | class | admissions | nap",3
+2021-02-07,"bad","facetime | homework | bujo | weightlifting | gym | cooking | cleaning",2
+2021-02-06,"meh","bujo | admissions | bleeding",3
+2021-02-05,"good","facetime | homework | bujo | test | class | admissions | weightlifting | gym | nap | bleeding",4
+2021-02-04,"good","facetime | shopping | homework | bujo | class | admissions | weightlifting | gym | ultimate | bleeding",4
+2021-02-03,"rad","relax | facetime | homework | bujo | class | weightlifting | gym | bleeding",5
+2021-02-02,"meh",NA,3
+2021-02-02,"good","friends | facetime | homework | bujo | class | weightlifting | gym | bleeding",4
+2021-02-01,"meh","admissions | weightlifting | gym | bleeding",3
+2021-01-31,"awful","relax | homework | admissions | weightlifting | gym | sick | bleeding | cleaning",1
+2021-01-30,"not meh but should be good","relax | friends | homework | bujo | weightlifting | gym | bleeding | cooking | cleaning",4
+2021-01-29,"rad","friends | eat out | shopping | class | admissions | bleeding | cleaning",5
+2021-01-28,"good","homework | class | weightlifting | gym | ultimate",4
+2021-01-27,"rad","facetime | homework | class | weightlifting | gym",5
+2021-01-26,"meh","homework | class | weightlifting | gym | ultimate | cooking",3
+2021-01-20,"good","homework | class | weightlifting | gym | cleaning",4
+2021-01-19,"rad","homework | class | admissions | weightlifting | gym | ultimate | cleaning",5
+2021-01-18,"rad","relax | friends | eat out | facetime | family | homework | bujo | cleaning",5
+2021-01-17,"good","relax | travel | eat out | facetime | family | weightlifting | gym",4
+2021-01-16,"meh","homework | admissions | cleaning",3
+2021-01-15,"good","homework | bujo | class | admissions | weightlifting | gym | cleaning",4
+2021-01-14,"meh","friends | travel | homework | bujo | class | weightlifting | running | gym | cleaning",3
+2021-01-12,"good","relax | homework | bujo | class | weightlifting | gym | cleaning",4
+2021-01-11,"good","bujo | class | admissions | weightlifting | gym | cleaning",4
+2021-01-10,"meh","relax | facetime | bujo | cleaning",3
+2021-01-09,"good","relax | friends | travel | eat out | cleaning",4
+2021-01-08,"meh","relax | family | cleaning",3
+2021-01-07,"rad","relax | friends | travel | eat out | family | cleaning",5
+2021-01-06,"good","relax | travel | eat out | family | date | weightlifting | gym | cleaning",4
+2021-01-05,"enamorada","relax | friends | travel | eat out | family | date",5
+2021-01-04,"meh","relax | family | weightlifting | running | gym | cleaning",3
+2021-01-03,"enamorada","relax | family | date | quality time | weightlifting | gym",5
+2021-01-02,"good","relax | friends | family | weightlifting | gym",4
+2021-01-01,"good","relax | family | weightlifting | gym | cleaning",4
+2020-12-10,"good","relax | friends | travel | family | tanning | homework | test | gym | cleaning",4
+2020-12-09,"good","friends | family | shopping | homework | test | weightlifting | gym",4
+2020-12-08,"rad","friends | family | homework | test | weightlifting | gym",5
+2020-12-07,"rad","friends | family | homework | weightlifting | gym",5
+2020-11-09,"good","homework | class | admissions | weightlifting | gym | bleeding | cleaning",4
+2020-11-07,"rad","relax | friends | travel | eat out | tanning | bujo | bleeding | cleaning",5
+2020-11-06,"good","friends | homework | class | admissions | weightlifting | gym | bleeding | cleaning",4
+2020-11-05,"meh","relax | bujo | hw date | weightlifting | gym | bleeding | cleaning",3
+2020-11-04,"stressed","homework | test | class | admissions | weightlifting | gym | cleaning",3
+2020-11-03,"good","friends | eat out | homework | hw date | class | admissions | weightlifting | gym",4
+2020-11-02,"good","friends | homework | class | admissions | weightlifting | gym",4
+2020-11-01,"rad","friends | travel | eat out | facetime | date | homework | hw date | cleaning",5
+2020-10-31,"rad","relax | friends | shopping | date | homework | weightlifting | gym | cleaning",5
+2020-10-30,"good","relax | friends | eat out | homework | class | admissions | weightlifting | gym | cleaning",4
+2020-10-29,"good","travel | family | class | weightlifting | gym | nap | cleaning",4
+2020-10-28,"good","friends | eat out | family | homework | class | gym",4
+2020-10-27,"good","relax | eat out | facetime | family | homework | class",4
+2020-10-26,"enamorada","relax | facetime | family | date | quality time | homework | class",5
+2020-09-05,"meh","relax | homework | cleaning",3
+2020-09-04,"good","relax | friends | travel | eat out | tanning | homework | class",4
+2020-08-27,"good","friends | tanning | homework | class | weightlifting | gym | bleeding | cleaning",4
+2020-08-26,"good","friends | travel | facetime | homework | hw date | class | weightlifting | gym | bleeding",4
+2020-08-20,"good","friends | class | weightlifting | gym",4
+2020-08-19,"good","relax | friends | travel | eat out | facetime | family | shopping | bleeding | cleaning",4
+2020-08-18,"rad","friends | travel | eat out | facetime | family | date | bleeding | cleaning",5
+2020-08-17,"enamorada","relax | family | date | quality time | nap | bleeding | cleaning",5
+2020-08-16,"bad","relax | facetime | bleeding | cleaning",2
+2020-08-15,"good","facetime | family | weightlifting | gym | bleeding | cleaning",4
+2020-08-14,"rad","relax | friends | eat out | family | wawa | date | quality time | bleeding | cleaning",5
+2020-08-13,"meh","relax | eat out | family | bleeding | cleaning",3
+2020-08-12,"good","relax | friends | weightlifting | gym | cleaning",4
+2020-08-11,"rad","relax | friends | travel | shopping | sleepover | bleeding",5
+2020-08-10,"meh","relax | family | shopping | weightlifting | gym | nap | bleeding | cleaning",3
+2020-08-09,"meh","relax | eat out | date | quality time | nap | bleeding",3
+2020-08-08,"rad","relax | friends | family | shopping | sleepover | date | quality time | work | bleeding",5
+2020-08-07,"good","friends | travel | eat out | work | bleeding",4
+2020-08-06,"meh","relax | family | shopping | weightlifting | gym | nap | bleeding | cleaning",3
+2020-08-05,"meh","family | shopping | weightlifting | gym | work | nap",3
+2020-08-04,"good","eat out | family | date | quality time | work",4
+2020-08-03,"good","facetime | family | shopping | work",4
+2020-08-02,"good","relax | friends | shopping | date | quality time | nap",4
+2020-08-01,"good","friends | family | work",4
+2020-07-31,"rad","friends | eat out | family | date | quality time | work",5
+2020-07-30,"meh","family | work | nap",3
+2020-07-29,"good","eat out | work",4
+2020-07-28,"good","friends | facetime | family | weightlifting | gym | work | nap",4
+2020-07-27,"enamorada","relax | eat out | sleepover | date | quality time | nap",5
+2020-07-26,"meh","family | weightlifting | gym | work",3
+2020-07-25,"meh","relax | facetime | family | work | nap",3
+2020-07-24,"good","facetime | shopping | gym | work",4
+2020-07-23,"meh","travel | facetime | weightlifting | gym | work | nap",3
+2020-07-22,"meh","eat out | weightlifting | gym | work",3
+2020-07-21,"rad",NA,5
+2020-07-21,"good","relax | friends | travel | tanning",4
+2020-07-20,"meh","family | tanning | work",3
+2020-07-19,"bad","facetime | family | tanning | date | work",2
+2020-07-18,"meh","eat out | family | sleepover | date | quality time | gym | work | nap",3
+2020-07-17,"good","relax | friends | travel | eat out | family | work",4
+2020-07-16,"meh","family | work",3
+2020-07-15,"good","family | work",4
+2020-07-14,"good","relax | family | weightlifting | gym",4
+2020-07-13,"meh","relax | family | date",3
+2020-07-12,"meh",NA,3
+2020-07-12,"bad","travel | eat out | date | quality time | work",2
+2020-07-11,"meh","shopping | work",3
+2020-07-10,"good","relax | eat out | date | quality time | work | nap",4
+2020-07-09,"good",NA,4
+2020-07-09,"meh",NA,3
+2020-07-09,"meh","relax | bujo | work",3
+2020-07-08,"rad",NA,5
+2020-07-08,"good","eat out | date | quality time | weightlifting | gym | work | nap",4
+2020-07-07,"good",NA,4
+2020-07-07,"meh","eat out | bujo | weightlifting | gym | work",3
+2020-07-06,"meh","family | work",3
+2020-07-05,"good",NA,4
+2020-07-05,"meh","work",3
+2020-07-04,"good","relax | facetime | family | date | weightlifting | gym | nap | cleaning",4
+2020-07-03,"enamorada","relax | travel | eat out | date | nap | cleaning",5
+2020-07-02,"enamorada","relax | travel | eat out | shopping | sleepover | date | quality time | nap",5
+2020-07-01,"enamorada","relax | travel | wawa | date | quality time | bujo | nap | cleaning",5
+2020-06-30,"good","date | bujo | work | cleaning",4
+2020-06-29,"good","shopping | date | quality time | bujo | work | bleeding",4
+2020-06-28,"good","bujo",4
+2020-06-28,"meh","facetime | family | work | cleaning",3
+2020-06-27,"rad","friends | eat out | shopping | date | quality time | bujo | work | nap",5
+2020-06-26,"rad","relax | friends | travel | facetime | tanning | shopping | bujo",5
+2020-06-25,"good",NA,4
+2020-06-25,"meh","family | bujo | work",3
+2020-06-24,"meh","bujo | weightlifting | gym | work",3
+2020-06-23,"meh","bujo | work",3
+2020-06-22,"good","date | quality time | work | sick | nap",4
+2020-06-21,"good","shopping | wawa | work | nap",4
+2020-06-20,"rad","relax | friends | eat out | sleepover | date",5
+2020-06-19,"meh","facetime | shopping | work | sick | bleeding",3
+2020-06-18,"good","relax | travel | eat out | date | quality time | nap",4
+2020-06-17,"rad",NA,5
+2020-06-17,"good","friends | travel | work",4
+2020-06-16,"good","tanning | weightlifting | gym | work",4
+2020-06-15,"not meh but should be good","friends | travel | eat out | work",4
+2020-06-14,"meh","gym | work",3
+2020-06-13,"meh","family | weightlifting | gym | work | sick",3
+2020-06-12,"good","family | gym | work | sick",4
+2020-06-11,"rad",NA,5
+2020-06-11,"good","eat out | shopping | date | work | sick",4
+2020-06-10,"rad","relax | date | quality time | weightlifting | gym | work | sick | nap",5
+2020-06-09,"good","travel | eat out | date | weightlifting | gym | work",4
+2020-06-08,"good","travel | family | wawa | date | nap",4
+2020-06-07,"good","eat out | family | date | quality time | nap",4
+2020-06-06,"meh",NA,3
+2020-06-06,"not meh but should be good","relax | travel | eat out | family | wawa | date",4
+2020-06-05,"good","wawa | date | quality time | work | nap",4
+2020-06-04,"meh",NA,3
+2020-06-04,"not meh but should be good","relax | friends | family | shopping | date",4
+2020-06-03,"enamorada",NA,5
+2020-06-03,"good","date | quality time | work | nap",4
+2020-06-02,"meh","weightlifting | gym | work",3
+2020-06-01,"enamorada","relax | eat out | wawa | date | quality time | work | nap",5
+2020-05-31,"meh","relax | facetime | work",3
+2020-05-30,"meh","family | date | work",3
+2020-05-29,"good","friends | family | work",4
+2020-05-28,"good","friends | eat out | work",4
+2020-05-27,"good","friends | travel | eat out | shopping | work",4
+2020-05-26,"good",NA,4
+2020-05-26,"meh","relax | travel | family",3
+2020-05-25,"good","travel | wawa | date | quality time | weightlifting | gym | work",4
+2020-05-24,"meh","work | cleaning",3
+2020-05-23,"meh","relax | work",3
+2020-05-22,"good","relax | friends | travel | eat out | test",4
+2020-05-21,"meh","relax | weightlifting | gym | cleaning",3
+2020-05-20,"meh","work",3
+2020-05-19,"meh","shopping | work | sick",3
+2020-05-18,"meh","relax | family | sick | cleaning",3
+2020-05-17,"good","wawa | date | quality time | weightlifting | gym | work | cleaning",4
+2020-05-16,"good","relax | friends | travel | tanning | shopping | date | cleaning",4
+2020-05-15,"good","relax",4
+2020-05-14,"enamorada","relax | travel | eat out | family | date | quality time | gym | cleaning",5
+2020-05-13,"meh",NA,3
+2020-05-13,"bad","relax | facetime | family | tanning",2
+2020-05-12,"bad","relax | facetime | family | tanning | nap",2
+2020-05-11,"bad",NA,2
+2020-05-11,"meh","relax | family | nap | cleaning",3
+2020-05-10,"good","relax | family | date | quality time | nap",4
+2020-05-10,"awful",NA,1
+2020-05-09,"good",NA,4
+2020-05-09,"meh","relax | friends | family | wawa | date | quality time | weightlifting | nap | cleaning",3
+2020-05-08,"meh","relax | family | bujo",3
+2020-05-07,"enamorada","relax | eat out | family | shopping | wawa | date | quality time | bujo",5
+2020-05-06,"enamorada","relax | eat out | wawa | date | quality time | nap",5
+2020-05-05,"good","relax | friends | travel | eat out | wawa | bujo | nap | cleaning",4
+2020-05-04,"good","relax | friends | family | gym",4
+2020-05-03,"meh","relax | facetime | family | cleaning",3
+2020-05-02,"meh","relax | friends | eat out | facetime | homework | babysitting",3
+2020-05-01,"meh","relax | facetime | family | tanning | homework | gym | nap",3
+2020-04-30,"good","relax | travel | eat out | date | quality time | gym | nap",4
+2020-04-29,"enamorada","relax | travel | eat out | facetime | family | shopping | date | quality time | gym",5
+2020-04-28,"bad",NA,2
+2020-04-28,"meh","relax | family | work | nap",3
+2020-04-27,"meh","relax | family | gym",3
+2020-04-26,"good","relax | facetime | family | nap",4
+2020-04-25,"meh","relax | friends | travel | eat out | family | work | cleaning",3
+2020-04-24,"bad","travel | family | homework | work",2
+2020-04-23,"meh",NA,3
+2020-04-23,"bad","travel | family | homework | work",2
+2020-04-22,"meh","travel | wawa | date | gym | work | cleaning",3
+2020-04-21,"rad","relax | friends | travel | eat out | facetime | family | wawa | date | quality time | bujo | gym",5
+2020-04-20,"meh","relax | facetime | family | bujo | gym",3
+2020-04-19,"meh","relax | facetime | family | bujo | gym",3
+2020-04-18,"good",NA,4
+2020-04-18,"rad","relax | family | date | quality time | bujo | gym | nap",5
+2020-04-17,"meh","relax | travel | eat out | facetime | family | bujo | gym",3
+2020-04-16,"meh","relax | family | homework | bujo | test | gym | bleeding | cleaning",3
+2020-04-15,"bad","relax | facetime | family | homework | gym | bleeding | cleaning",2
+2020-04-14,"meh","relax | facetime | family | date | quality time | homework | bujo | gym | bleeding",3
+2020-04-13,"good","relax | family | homework | bujo | gym | cleaning",4
+2020-04-12,"enamorada","relax | friends | travel | facetime | family | wawa | date | quality time | bujo | nap",5
+2020-04-11,"good","relax | facetime | family | bujo | gym | cleaning",4
+2020-04-10,"rad","relax | friends | facetime | family | cfa | homework | bujo | gym",5
+2020-04-09,"rad",NA,5
+2020-04-09,"good","relax | family | date | quality time | gym | nap | cleaning",4
+2020-04-08,"enamorada","relax | family | wawa | date | quality time | bujo | gym | nap | cleaning",5
+2020-04-07,"not meh but should be good",NA,4
+2020-04-07,"meh","relax | family | date | bujo | gym | nap",3
+2020-04-06,"meh","relax | facetime | family | homework | gym",3
+2020-04-06,"meh",NA,3
+2020-04-05,"bad",NA,2
+2020-04-05,"meh","relax | family | homework | gym | nap | bleeding",3
+2020-04-04,"bad","facetime | family | gym | bleeding",2
+2020-04-03,"meh","relax | family | gym | bleeding",3
+2020-04-02,"bad","family | shopping | gym | bleeding | cleaning",2
+2020-04-01,"meh","relax | homework | gym | bleeding | cleaning",3
+2020-03-31,"good","relax | facetime | family | date | homework | nap",4
+2020-03-30,"good","relax | friends | travel | eat out | family | homework | gym | bleeding | cleaning",4
+2020-03-29,"enamorada","family | date | quality time | bujo | gym",5
+2020-03-28,"enamorada","relax | friends | family | date | quality time | gym | nap",5
+2020-03-27,"good",NA,4
+2020-03-27,"meh","relax | facetime | family | date | quality time | bujo | gym | cleaning",3
+2020-03-26,"bad","relax | facetime | family | homework | gym | nap",2
+2020-03-25,"good",NA,4
+2020-03-25,"meh","relax | family | gym | bleeding",3
+2020-03-24,"good","relax | friends | bujo | gym | bleeding | cleaning",4
+2020-03-23,"meh","relax | facetime | family | bleeding | cleaning",3
+2020-03-22,"enamorada","relax | travel | eat out | family | wawa | date | quality time | bujo | bleeding",5
+2020-03-21,"good",NA,4
+2020-03-21,"rad","relax | friends | travel | eat out | family | shopping | sleepover | date | quality time | bleeding",5
+2020-03-20,"bad","relax | family | gym",2
+2020-03-19,"rad","relax | friends | travel | family | gym | cleaning",5
+2020-03-18,"meh","friends | shopping | date | bujo",3
+2020-03-17,"good",NA,4
+2020-03-17,"meh","relax | friends | travel | eat out | family | bujo",3
+2020-03-16,"good","relax | friends | travel | eat out | bujo | nap | cleaning",4
+2020-03-15,"good",NA,4
+2020-03-15,"rad","relax | friends | travel | eat out | gym",5
+2020-03-14,"meh","family | date",3
+2020-03-13,"rad","relax | friends | travel | eat out",5
+2020-03-12,"bad","friends | travel | eat out | homework",2
+2020-03-11,"meh","relax | date | quality time | game/meet",3
+2020-03-10,"good","relax | friends | date | gym",4
+2020-03-09,"good","friends | travel | eat out | homework | bujo | test | gym | sick",4
+2020-03-08,"meh","friends | homework | bujo | babysitting | sick | cleaning",3
+2020-03-07,"meh","relax | family | homework | sick",3
+2020-03-06,"good","relax | date | quality time | homework | sick | nap",4
+2020-03-05,"good","relax | friends | family | wawa | date | quality time | bujo | gym | sick | nap | cleaning",4
+2020-03-04,"good","relax | eat out | sleepover | date | game/meet",4
+2020-03-03,"good","relax | friends | family | homework | bujo | gym | cleaning",4
+2020-03-02,"good","friends | family | homework | bujo | test | gym",4
+2020-03-01,"rad","relax | friends | travel | eat out | homework | hw date",5
+2020-02-29,"good","relax | friends | eat out | wawa | date | quality time | homework",4
+2020-02-28,"good","friends | travel | eat out | date | bujo | volunteering | gym | cleaning",4
+2020-02-27,"meh","relax | family | homework | bujo | cleaning",3
+2020-02-26,"meh","friends | family | date | homework | test | gym | nap | cleaning",3
+2020-02-25,"awful","family | date | homework | cleaning",1
+2020-02-24,"good","relax | friends | shopping | homework | test | hw date | gym",4
+2020-02-23,"enamorada","relax | date | quality time | homework | nap",5
+2020-02-22,"bad","relax | friends | family | sleepover | date | homework | babysitting | nap",2
+2020-02-21,"meh",NA,3
+2020-02-21,"good","friends | family | homework | gym | nap | cleaning",4
+2020-02-20,"good","relax | friends | travel | family | date | homework | test | nap",4
+2020-02-19,"rad","travel | wawa | date | quality time | homework | test | game/meet | gym | bleeding | cleaning",5
+2020-02-18,"good",NA,4
+2020-02-18,"meh","friends | travel | eat out | family | cfa | homework | test | gym | nap",3
+2020-02-17,"rad","travel | eat out | family | date | homework | test | nap",5
+2020-02-16,"good","travel | family | date | homework | test | nap",4
+2020-02-15,"meh","relax | friends | travel | family | homework | test | gym | nap",3
+2020-02-14,"enamorada","relax | travel | eat out | date | quality time | homework | bujo | nap | bleeding",5
+2020-02-13,"good","50 pushups  | relax | friends | travel | eat out | homework | bujo | gym",4
+2020-02-12,"rad","relax | friends | travel | eat out | shopping | date | homework | bujo | hw date | game/meet",5
+2020-02-11,"good","friends | travel | eat out | homework | bujo | volunteering | gym",4
+2020-02-10,"meh","friends | eat out | homework | bujo | weightlifting | gym",3
+2020-02-09,"meh","family | shopping | homework | babysitting | cleaning",3
+2020-02-08,"enamorada","relax | friends | travel | eat out | family | date | quality time | homework | bujo | volunteering | nap | cleaning",5
+2020-02-07,"good","relax | friends | travel | eat out | family | homework | bujo | hw date | sick | cleaning",4
+2020-02-06,"meh","eat out | date | homework | sick | nap",3
+2020-02-05,"meh","family | homework | bujo | sick | nap",3
+2020-02-04,"good","relax | facetime | family | homework | bujo | weightlifting | gym | cleaning",4
+2020-02-03,"rad","relax | friends | travel | eat out | homework | bujo | test | hw date | game/meet | soccer | gym | nap",5
+2020-02-02,"awful","friends | eat out | date | quality time | homework | gym | babysitting | bleeding | cleaning",1
+2020-02-01,"meh","50 pushups  | relax | friends | travel | eat out | date | homework | bujo | hw date | gym | bleeding",3
+2020-01-31,"good","relax | eat out | family | date | homework | test | sick | nap | bleeding | cleaning",4
+2020-01-30,"rad","50 pushups  | friends | family | date | quality time | homework | game/meet | weightlifting | soccer | gym | nap",5
+2020-01-29,"meh","relax | friends | eat out | homework | weightlifting | gym",3
+2020-01-28,"meh","50 pushups  | friends | eat out | cfa | homework | test | game/meet | weightlifting | soccer | gym | sick",3
+2020-01-27,"good","50 pushups  | travel | eat out | date | homework | hw date | weightlifting | soccer | gym | cleaning",4
+2020-01-26,"enamorada",NA,5
+2020-01-26,"good","travel | eat out | facetime | date | homework",4
+2020-01-25,"rad","relax | friends | travel | eat out | date | quality time | nap",5
+2020-01-24,"rad","50 pushups  | relax | friends | travel | eat out | wawa | date | quality time | game/meet | weightlifting | gym | nap",5
+2020-01-23,"bad","facetime | cfa | homework | sick | cleaning",2
+2020-01-22,"meh","homework | bujo | test | weightlifting | gym | bleeding | cleaning",3
+2020-01-21,"meh","travel | eat out | homework | bujo | game/meet | soccer | gym | bleeding",3
+2020-01-20,"good",NA,4
+2020-01-20,"meh","bleeding | cleaning",3
+2020-01-19,"meh","friends | travel | eat out | homework | bujo | volunteering | hw date | bleeding | cleaning",3
+2020-01-18,"enamorada","50 pushups  | relax | friends | travel | eat out | family | shopping | date | quality time | weightlifting | gym | nap | bleeding | cleaning",5
+2020-01-17,"rad","50 pushups  | relax | friends | travel | eat out | facetime | sleepover | homework | bujo | weightlifting | gym | nap | bleeding | cleaning",5
+2020-01-16,"good","travel | eat out | homework | bujo | game/meet | soccer | gym",4
+2020-01-15,"rad","50 pushups  | relax | friends | travel | eat out | wawa | date | quality time | homework | bujo | game/meet | weightlifting | gym | sick | cleaning",5
+2020-01-14,"rad","friends | travel | eat out | family | date | homework | test | game/meet | soccer | gym | sick",5
+2020-01-13,"meh","50 pushups  | family | weightlifting | gym | sick | nap | cleaning",3
+2020-01-12,"enamorada","relax | friends | travel | family | wawa | date | homework | bujo | sick | cleaning",5
+2020-01-11,"stressed",NA,3
+2020-01-11,"good","relax | friends | family | homework | hw date | gym | sick | cleaning",4
+2020-01-10,"good","relax | family | date | quality time | homework | bujo | nap | cleaning",4
+2020-01-09,"good","friends | travel | eat out | facetime | cfa | homework | game/meet | soccer | gym | cleaning",4
+2020-01-08,"good","relax | homework | bujo | weightlifting | gym | sick | bleeding | cleaning",4
+2020-01-07,"rad","relax | friends | cfa | date | homework | bujo | game/meet | weightlifting | soccer | gym | nap | bleeding",5
+2020-01-06,"enamorada","relax | friends | eat out | facetime | family | date | homework | bujo | cleaning",5
+2020-01-05,"rad","relax | travel | eat out | family | date | quality time | nap",5
+2020-01-04,"enamorada",NA,5
+2020-01-04,"good","relax | travel | eat out | family | date | quality time",4
+2020-01-03,"enamorada","relax | friends | travel | eat out | family | shopping | date | quality time | gym | nap",5
+2020-01-02,"good","date",4
+2020-01-01,"good","travel | eat out | facetime | family | shopping | date",4
+2019-12-31,"enamorada","relax | eat out | family | shopping | date | quality time | weightlifting | gym | nap | cleaning",5
+2019-12-30,"enamorada","50 pushups  | relax | eat out | cfa | wawa | date | quality time | weightlifting | gym | cleaning",5
+2019-12-29,"meh","relax | friends | travel | eat out | family | date | cleaning",3
+2019-12-28,"meh","relax | family | gym | bleeding",3
+2019-12-27,"good","relax | friends | eat out | cfa | date | weightlifting | gym | bleeding | cleaning",4
+2019-12-26,"rad","relax | friends | travel | shopping | wawa | date | quality time | bleeding",5
+2019-12-25,"meh","relax | family | date | gym",3
+2019-12-24,"bad","relax | family | date | weightlifting | gym | bleeding | cleaning",2
+2019-12-23,"meh","50 pushups  | relax | eat out | family | bujo | weightlifting | gym",3
+2019-12-22,"good","relax | friends | sleepover | bujo | gym | bleeding | cleaning",4
+2019-12-21,"bad","50 pushups  | relax | family | shopping | bujo | weightlifting | gym | bleeding | cleaning",2
+2019-12-20,"awful",NA,1
+2019-12-20,"good","relax | friends | travel | eat out | shopping",4
+2019-12-19,"rad","gym",5
+2019-12-19,"rad","50 pushups  | relax | friends | travel | family | cfa | weightlifting | gym | cleaning",5
+2019-12-18,"good","relax | friends | eat out | date | quality time | nap | cleaning",4
+2019-12-17,"meh","50 pushups  | relax | test | weightlifting | gym | nap | cleaning",3
+2019-12-16,"good","relax | friends | travel | eat out | cfa | homework | test | game/meet | weightlifting | gym",4
+2019-12-15,"bad","relax | friends | travel | eat out | family | date | homework | volunteering",2
+2019-12-14,"awful",NA,1
+2019-12-14,"meh","relax | eat out | shopping | homework | hw date | nap",3
+2019-12-13,"meh","family | homework | bujo | test | sick | nap | cleaning",3
+2019-12-13,"good",NA,4
+2019-12-12,"not meh but should be good","friends | travel | eat out | homework | bujo | game/meet | soccer | gym | sick",4
+2019-12-11,"good","50 pushups  | relax | travel | shopping | date | homework | game/meet | weightlifting | gym",4
+2019-12-10,"good",NA,4
+2019-12-10,"meh","50 pushups  | friends | travel | eat out | homework | test | game/meet | soccer | gym | sick",3
+2019-12-09,"good","50 pushups  | family | date | homework | test | weightlifting | gym | sick | nap",4
+2019-12-08,"good",NA,4
+2019-12-08,"stressed","friends | eat out | family | homework | hw date | sick | bleeding",3
+2019-12-07,"good","relax | eat out | family | date | quality time | homework | sick | nap | bleeding | cleaning",4
+2019-12-06,"rad","friends | travel | eat out | wawa | date | quality time | homework | test | weightlifting | gym | sick | nap | bleeding",5
+2019-12-05,"good","friends | facetime | homework | test | game/meet | weightlifting | soccer | gym | sick",4
+2019-12-04,"stressed","family | homework | test | weightlifting | gym | sick | nap",3
+2019-12-03,"good","relax | friends | travel | eat out | cfa | homework | test | game/meet | soccer | gym",4
+2019-12-02,"bad","relax | homework | bujo | weightlifting | soccer | gym | bleeding",2
+2019-12-01,"stressed","relax | family | homework | bujo | gym | bleeding",3
+2019-11-30,"meh",NA,3
+2019-11-30,"not meh but should be good","relax | family | homework | cleaning",4
+2019-11-29,"enamorada","relax | eat out | family | date | quality time",5
+2019-11-28,"enamorada","relax | family | wawa | date | quality time | homework | cleaning",5
+2019-11-27,"bad","relax | friends | eat out | homework | bujo | weightlifting | gym | nap | cleaning",2
+2019-11-26,"meh","relax | family | homework | weightlifting | gym | nap",3
+2019-11-25,"rad","relax | friends | travel | eat out | family | shopping | bujo | weightlifting | gym",5
+2019-11-24,"meh","relax | family | date | homework | gym",3
+2019-11-23,"awful","relax | friends | shopping | homework | gym | nap | cleaning",1
+2019-11-22,"meh","friends | eat out | family | cfa | date | homework | nap",3
+2019-11-21,"good","friends | eat out | date | homework | game/meet | soccer",4
+2019-11-20,"meh","homework | weightlifting | soccer | gym",3
+2019-11-19,"rad","relax | friends | travel | eat out | game/meet | soccer | gym | bleeding",5
+2019-11-18,"meh","relax | family | cfa | date | homework | weightlifting | soccer | gym | bleeding",3
+2019-11-17,"good","relax | travel | eat out | family | homework | bujo | sick",4
+2019-11-16,"enamorada","relax | eat out | facetime | family | date | quality time | bujo | nap | bleeding | cleaning",5
+2019-11-15,"rad","relax | cfa | date | quality time | homework | bujo | nap | bleeding | cleaning",5
+2019-11-14,"rad","friends | travel | eat out | date | game/meet | weightlifting | soccer | gym",5
+2019-11-13,"good","family | cfa | date | quality time | homework | weightlifting | soccer | gym | bleeding | cleaning",4
+2019-11-12,"stressed","friends | travel | eat out | homework | game/meet | soccer | gym | nap | bleeding",3
+2019-11-11,"good","relax | family | cfa | shopping | date | homework",4
+2019-11-10,"bad","family | date | quality time | homework | babysitting | cleaning",2
+2019-11-09,"meh",NA,3
+2019-11-09,"good","travel | facetime | family | cfa | date | homework",4
+2019-11-08,"good","friends | cfa | date | quality time | homework | bujo | test | weightlifting | soccer | gym",4
+2019-11-07,"good","family | wawa | date | quality time | homework | weightlifting | soccer | gym",4
+2019-11-06,"enamorada","relax | friends | family | date | game/meet | weightlifting | gym | cleaning",5
+2019-11-05,"bad","facetime | homework | weightlifting | soccer | nap",2
+2019-11-04,"stressed","cfa | date | homework | test | weightlifting | soccer | gym",3
+2019-11-03,"awful","relax | family | date | homework | cleaning",1
+2019-11-02,"bad","relax | friends | travel | eat out | family | homework | bujo | nap | cleaning",2
+2019-11-01,"good",NA,4
+2019-11-01,"meh","relax | friends | family | cfa | date | quality time | homework | bujo | weightlifting | gym | nap | cleaning",3
+2019-10-31,"bad","family | cfa | date | homework | weightlifting | soccer | gym | nap",2
+2019-10-30,"bad","cfa | shopping | date | homework | hw date | weightlifting | soccer | gym",2
+2019-10-29,"meh","family | homework | soccer | gym",3
+2019-10-28,"good","cfa | date | quality time | homework | bujo | hw date | weightlifting | soccer | gym | cleaning",4
+2019-10-27,"good","relax | family | homework | cleaning",4
+2019-10-26,"enamorada","relax | friends | travel | eat out | wawa | date | quality time | nap",5
+2019-10-25,"meh",NA,3
+2019-10-25,"not meh but should be good","relax | family | cfa | date | weightlifting | gym | nap | bleeding | cleaning",4
+2019-10-24,"good","homework | weightlifting | soccer | gym | nap | bleeding",4
+2019-10-23,"good","relax | friends | cfa | date | homework | volunteering | weightlifting | soccer | gym | bleeding",4
+2019-10-22,"good","cfa | wawa | date | quality time | homework | hw date | soccer | gym | nap | bleeding",4
+2019-10-21,"not meh but should be good","relax | friends | homework | soccer | gym | nap | bleeding",4
+2019-10-20,"stressed","relax | friends | travel | eat out | facetime | shopping | date | homework | volunteering | nap | bleeding",3
+2019-10-19,"enamorada","relax | friends | travel | eat out | family | cfa | date | homework | bujo | bleeding",5
+2019-10-18,"enamorada","relax | friends | family | shopping | date | quality time | test | nap | bleeding",5
+2019-10-17,"good","cfa | date | quality time | homework | hw date | bleeding | cleaning",4
+2019-10-16,"stressed","family | date | homework | test | weightlifting | gym | nap",3
+2019-10-15,"good","facetime | sleepover | homework | weightlifting | gym",4
+2019-10-14,"awful","travel | facetime | cfa | date | homework | test | hw date | weightlifting | gym | sick",1
+2019-10-13,"good","eat out | facetime | family | date | homework | babysitting | cleaning",4
+2019-10-12,"enamorada","relax | friends | travel | eat out | date | quality time | homework | nap",5
+2019-10-11,"bad","family | homework | nap | cleaning",2
+2019-10-10,"good","travel | eat out | cfa | date | homework | hw date | weightlifting | gym",4
+2019-10-09,"stressed",NA,3
+2019-10-09,"good","cfa | date | homework | bujo | hw date | weightlifting | gym | sick | cleaning",4
+2019-10-08,"good","relax | eat out | family | date | homework | weightlifting | gym | nap",4
+2019-10-07,"good","facetime | cfa | date | homework | hw date | cleaning",4
+2019-10-06,"good",NA,4
+2019-10-06,"stressed","relax | eat out | facetime | family | homework | bujo | hw date | cleaning",3
+2019-10-05,"good","friends | facetime | wawa | date | quality time | homework | volunteering | cleaning",4
+2019-10-04,"meh","homework | test | work | cleaning",3
+2019-10-03,"enamorada","relax | travel | eat out | cfa | shopping | date | quality time",5
+2019-10-02,"good",NA,4
+2019-10-02,"stressed","friends | family | cfa | date | cleaning",3
+2019-10-01,"good","relax | travel | eat out | family | date | homework",4
+2019-09-30,"stressed",NA,3
+2019-09-30,"good","friends | eat out | cfa | date | homework | bujo | test | hw date",4
+2019-09-29,"good","relax | family | date | homework | bujo | cleaning",4
+2019-09-28,"good","relax | friends | travel | eat out | family | shopping | date | homework | bujo | volunteering | nap",4
+2019-09-27,"good","date | quality time | work",4
+2019-09-26,"stressed","relax | facetime | date | quality time | homework | weightlifting | gym",3
+2019-09-25,"not meh but should be good","relax | friends | travel | eat out | facetime | shopping | date | homework",4
+2019-09-24,"meh",NA,3
+2019-09-24,"good","relax | facetime | family | shopping | date | homework | weightlifting | gym | nap",4
+2019-09-23,"good","eat out | facetime | homework | test | hw date | bleeding | cleaning",4
+2019-09-22,"good","facetime | family | date | homework | bleeding",4
+2019-09-21,"enamorada","relax | friends | travel | eat out | family | wawa | date | quality time | nap | bleeding | cleaning",5
+2019-09-20,"good","relax | shopping | date | work | nap | bleeding | cleaning",4
+2019-09-19,"awful","travel | eat out | cfa | date | homework | test | bleeding",1
+2019-09-18,"bad","eat out | cfa | date | homework | test | bleeding",2
+2019-09-17,"awful","cfa | date | homework | test | sick",1
+2019-09-16,"meh","eat out | date | homework | test | cleaning",3
+2019-09-15,"bad","friends | eat out | shopping | homework | cleaning",2
+2019-09-14,"good","family | wawa | date | quality time | homework | bujo | work | cleaning",4
+2019-09-13,"good","wawa | date | quality time | homework | test | work | nap",4
+2019-09-12,"stressed","eat out | family | homework | test | nap | cleaning",3
+2019-09-11,"good","friends | eat out | cfa | date | homework | test | gym | cleaning",4
+2019-09-10,"good","friends | eat out | cfa | date | homework | test | weightlifting | gym | nap",4
+2019-09-09,"meh","homework | gym | cleaning",3
+2019-09-08,"bad",NA,2
+2019-09-08,"meh","eat out | date | quality time | homework | babysitting",3
+2019-09-07,"rad","relax | eat out | family | wawa | date | quality time | homework | bujo | work | cleaning",5
+2019-09-06,"meh","homework | work",3
+2019-09-05,"good","relax | friends | travel | eat out | homework | bujo",4
+2019-09-04,"rad","relax | eat out | family | date | quality time | homework",5
+2019-09-03,"good","relax | family | homework | nap | cleaning",4
+2019-09-02,"rad","relax | travel | eat out | date | sick | nap",5
+2019-09-02,"meh",NA,3
+2019-09-01,"rad","relax | travel | eat out | family | date | sick | nap",5
+2019-08-31,"rad","relax | travel | eat out | family | date | bujo | sick | nap",5
+2019-08-30,"rad","relax | travel | eat out | date | homework | sick | nap",5
+2019-08-29,"rad","relax | friends | travel | eat out | date | homework | sick | nap | cleaning",5
+2019-08-28,"good","friends | eat out | date | homework | bujo | sick",4
+2019-08-27,"rad","friends | date | quality time | homework | test | weightlifting | gym | sick | nap | bleeding",5
+2019-08-26,"good","homework | gym | bleeding | cleaning",4
+2019-08-25,"good","eat out | date | homework | bujo | gym | work | bleeding",4
+2019-08-24,"bad","date",2
+2019-08-24,"rad","relax | friends | eat out | date | test | work | bleeding",5
+2019-08-23,"rad","relax | friends | eat out | wawa | date | quality time | homework | test | work | bleeding | cleaning",5
+2019-08-22,"good","relax | friends | eat out | date | homework | bujo | bleeding",4
+2019-08-21,"good","friends | homework | bleeding",4
+2019-08-20,"stressed","shopping | homework | weightlifting | sick | cleaning",3
+2019-08-20,"bad",NA,2
+2019-08-19,"stressed","friends | eat out | date | homework | sick | cleaning",3
+2019-08-18,"bad","date | homework | bujo | work | sick | cleaning",2
+2019-08-17,"meh","relax | date | homework | work | sick",3
+2019-08-16,"rad","relax | friends | date | homework | work",5
+2019-08-15,"good","date | homework | bujo | gym | sick | cleaning",4
+2019-08-14,"good","eat out | date | homework | sick | cleaning",4
+2019-08-13,"good","friends | eat out | homework | bujo | sick | cleaning",4
+2019-08-12,"good","travel | eat out | date | homework | sick | cleaning",4
+2019-08-11,"rad","relax | friends | travel | eat out | date | nap",5
+2019-08-10,"good","relax | friends | travel | homework | work | cleaning",4
+2019-08-09,"good","friends | travel | eat out | date | homework | work",4
+2019-08-08,"rad","relax | travel | eat out | wawa | date | quality time | homework | sick | nap | bleeding | cleaning",5
+2019-08-07,"awful",NA,1
+2019-08-07,"bad","relax | friends | travel | date | sick | nap | bleeding | cleaning",2
+2019-08-06,"rad","relax | friends | sleepover | wawa | date | quality time | bleeding",5
+2019-08-05,"rad","friends | eat out | sleepover | wawa | bleeding",5
+2019-08-04,"good","relax | friends | travel | eat out | wawa | work | nap | bleeding | cleaning",4
+2019-08-03,"good","friends | eat out | wawa | date | work | bleeding",4
+2019-08-02,"rad","relax | friends | eat out | wawa | date | work | bleeding | cleaning",5
+2019-08-01,"meh","relax | friends | eat out | shopping | bleeding",3
+2019-07-31,"bad",NA,2
+2019-07-31,"meh","eat out | facetime | shopping | homework | weightlifting | nap | bleeding | cleaning",3
+2019-07-30,"meh",NA,3
+2019-07-30,"good","facetime | weightlifting | sick | nap | bleeding | cleaning",4
+2019-07-29,"meh","relax | family | homework | sick | cleaning",3
+2019-07-28,"bad","eat out | family | work | nap",2
+2019-07-28,"bad","eat out | family | homework | work | nap | cleaning",2
+2019-07-27,"good","eat out | homework | work",4
+2019-07-26,"good","friends | eat out | date | quality time | homework | work",4
+2019-07-25,"rad","relax | friends | travel | eat out | shopping | sleepover | date | weightlifting",5
+2019-07-24,"rad","relax | friends | travel | eat out | sleepover | weightlifting",5
+2019-07-23,"good","relax | friends | eat out | facetime | wawa | date | homework | weightlifting",4
+2019-07-22,"meh","friends | travel | facetime | homework | weightlifting | soccer",3
+2019-07-21,"meh","facetime | work",3
+2019-07-20,"meh","eat out | family | homework | work",3
+2019-07-19,"bad","work | cleaning",2
+2019-07-18,"good","relax | friends | travel | shopping | date",4
+2019-07-17,"good","friends | eat out | shopping | weightlifting | nap",4
+2019-07-16,"meh",NA,3
+2019-07-16,"good","friends | travel | eat out | shopping | sleepover | date | homework | weightlifting | nap",4
+2019-07-15,"good","friends | travel | shopping | sleepover | cleaning",4
+2019-07-14,"rad","relax | friends | date | quality time | work | nap",5
+2019-07-13,"good","date | work | cleaning",4
+2019-07-12,"good","friends | work",4
+2019-07-11,"good","relax | friends | eat out | sleepover | date | weightlifting",4
+2019-07-10,"meh","gym | nap | cleaning",3
+2019-07-09,"good","friends | eat out | facetime | gym | nap",4
+2019-07-08,"rad","relax | friends | travel | eat out | wawa | date",5
+2019-07-07,"bad","work",2
+2019-07-07,"good","friends | eat out | sleepover | cleaning",4
+2019-07-06,"meh","work",3
+2019-07-05,"good","friends | wawa | date | work | cleaning",4
+2019-07-04,"good","friends | travel | eat out | family",4
+2019-07-03,"good","friends | eat out | facetime | date | gym | cleaning",4
+2019-07-02,"rad","travel | eat out | date | quality time | bujo | cleaning",5
+2019-07-01,"good","friends | bujo | cleaning",4
+2019-06-30,"rad","friends | eat out | date | quality time | bujo | work",5
+2019-06-29,"not meh but should be good","relax | travel | family | date | homework | bujo | nap | cleaning",4
+2019-06-29,"bad",NA,2
+2019-06-28,"not meh but should be good","relax | travel | eat out | family | shopping | bujo | cleaning",4
+2019-06-27,"good","relax | travel | eat out | family | bujo | gym",4
+2019-06-26,"good","relax | travel | eat out | family | shopping | nap",4
+2019-06-25,"bad","relax | travel | eat out | family | gym | nap",2
+2019-06-24,"good","relax | travel | eat out | family | gym | nap",4
+2019-06-23,"good","relax | travel | eat out | family | bujo | gym | nap",4
+2019-06-22,"not meh but should be good","relax | travel | eat out | family | gym | nap",4
+2019-06-21,"good","relax | travel | eat out | family | shopping | bujo",4
+2019-06-20,"good","relax | travel | family | nap",4
+2019-06-19,"meh","family | bujo | weightlifting | cleaning",3
+2019-06-18,"meh","friends | eat out | bujo | gym | cleaning",3
+2019-06-17,"good","eat out | date | bujo | weightlifting | nap | cleaning",4
+2019-06-16,"rad","relax | friends | travel | shopping | date | bujo | work | nap",5
+2019-06-15,"good","friends | travel | eat out | family | date | bujo | cleaning",4
+2019-06-14,"good","relax | facetime | family | date | quality time | bujo | cleaning",4
+2019-06-13,"rad","relax | friends | eat out | date | bujo | weightlifting | bleeding",5
+2019-06-12,"rad","relax | eat out | facetime | date | work | bleeding | cleaning",5
+2019-06-11,"rad","date | bujo | work | bleeding | cleaning",5
+2019-06-10,"good","friends | eat out | date | bujo | weightlifting | bleeding",4
+2019-06-09,"rad","date | bujo | weightlifting | babysitting | bleeding | cleaning",5
+2019-06-08,"good","relax | friends | travel | eat out | date | bujo | cleaning",4
+2019-06-07,"rad","relax | friends | travel | eat out | date | bujo",5
+2019-06-06,"rad","relax | friends | travel | eat out | facetime | date | nap",5
+2019-06-05,"rad","relax | friends | travel | eat out | date | test | nap",5
+2019-06-04,"good","relax | friends | eat out | homework | bujo | test | weightlifting",4
+2019-06-03,"meh","friends | travel | eat out | test | nap | cleaning",3
+2019-06-02,"good","travel | eat out | homework | nap | cleaning",4
+2019-06-01,"rad","relax | friends | travel | eat out",5
+2019-05-31,"good","friends | homework | bujo | nap",4
+2019-05-30,"good","relax | friends | travel | bujo",4
+2019-05-29,"good","homework | bujo | test | weightlifting | nap",4
+2019-05-28,"rad","relax | friends | eat out | date | homework | bujo | weightlifting",5
+2019-05-27,"meh","relax | friends | eat out | homework | bujo",3
+2019-05-26,"good","relax | friends | eat out | facetime | bujo",4
+2019-05-25,"good","relax | friends | travel | eat out | volunteering",4
+2019-05-24,"stressed","bujo | nap",3
+2019-05-23,"good","relax | friends | eat out | homework | test",4
+2019-05-22,"stressed","relax | friends | eat out | homework | nap | cleaning",3
+2019-05-21,"stressed","homework | test | volunteering | weightlifting",3
+2019-05-20,"stressed","homework | nap | cleaning",3
+2019-05-19,"meh","relax | homework | cleaning",3
+2019-05-18,"good","relax | friends | travel | eat out | homework",4
+2019-05-17,"good","relax | friends | eat out | volunteering | nap",4
+2019-05-16,"good","friends | eat out | homework | bujo | test | volunteering | weightlifting",4
+2019-05-15,"bad","relax | homework | volunteering",2
+2019-05-14,"rad","relax | friends | travel | eat out | homework | test | volunteering | nap",5
+2019-05-13,"good","friends | travel | eat out | homework | test",4
+2019-05-12,"good","eat out | homework | babysitting | bleeding",4
+2019-05-11,"rad","relax | friends | travel | eat out | bleeding",5
+2019-05-10,"good","volunteering | bleeding",4
+2019-05-09,"good","relax | friends | eat out | homework | weightlifting | bleeding",4
+2019-05-08,"good","relax | friends | travel | homework | test | nap | bleeding",4
+2019-05-07,"good","relax | friends | weightlifting | bleeding",4
+2019-05-06,"stressed","homework | bujo | test | volunteering",3
+2019-05-05,"rad","relax | friends | travel | eat out | homework | bujo",5
+2019-05-04,"good","relax | friends | travel | weightlifting | babysitting | reffing",4
+2019-05-03,"rad","relax | friends | travel | eat out | volunteering",5
+2019-05-02,"good","relax | friends | travel | eat out | homework | nap",4
+2019-05-01,"rad","relax | friends | travel | eat out | homework | volunteering",5
+2019-04-30,"good","relax | friends | travel | eat out | homework | volunteering | weightlifting",4
+2019-04-29,"good","friends | homework | test | volunteering",4
+2019-04-28,"rad","relax | friends | travel | eat out | homework",5
+2019-04-27,"rad","relax | friends | reffing | nap",5
+2019-04-26,"rad","relax | friends | eat out | volunteering",5
+2019-04-25,"rad","homework | weightlifting | nap | cleaning",5
+2019-04-24,"good","relax | friends | travel | homework",4
+2019-04-23,"good","facetime | homework | test | weightlifting | nap",4
+2019-04-22,"stressed","friends | facetime | homework | volunteering | cleaning",3
+2019-04-21,"good","facetime | homework | cleaning",4
+2019-04-20,"rad","relax | friends | travel | eat out",5
+2019-04-19,"good","relax | friends | facetime | nap",4
+2019-04-18,"rad","relax | friends | travel | eat out",5
+2019-04-17,"stressed","friends | facetime | homework | sick",3
+2019-04-16,"bad","facetime | homework | volunteering",2
+2019-04-15,"meh","facetime | homework | volunteering",3
+2019-04-14,"meh","homework | reffing | cleaning",3
+2019-04-13,"good","travel | facetime | homework | reffing | nap | cleaning",4
+2019-04-12,"rad","relax | friends | travel | eat out | facetime",5
+2019-04-11,"good","relax | friends | travel | eat out | facetime | homework",4
+2019-04-10,"rad","relax | friends | eat out | facetime | homework | bujo | volunteering",5
+2019-04-09,"good","facetime | homework | test | volunteering",4
+2019-04-08,"good","facetime | homework | bujo | volunteering | bleeding | cleaning",4
+2019-04-07,"good","homework | bujo | reffing | bleeding",4
+2019-04-06,"rad","relax | friends | travel | eat out | bleeding",5
+2019-04-05,"rad","relax | friends | travel | eat out | bujo | volunteering | bleeding",5
+2019-04-04,"rad","relax | friends | travel | eat out | facetime | bujo | volunteering | bleeding",5
+2019-04-03,"good","relax | friends | facetime | bujo | volunteering | bleeding | cleaning",4
+2019-04-02,"stressed","travel | eat out | facetime | homework",3
+2019-04-01,"good","relax | friends | eat out | homework | nap | cleaning",4
+2019-03-31,"good","friends | eat out | facetime | homework | bujo | cleaning",4
+2019-03-30,"meh","relax | bujo | cleaning",3
+2019-03-29,"good","eat out | homework | bujo | volunteering | babysitting",4
+2019-03-28,"good","relax | friends | eat out | facetime | homework",4
+2019-03-27,"stressed","facetime | cleaning",3
+2019-03-26,"bad","homework | test | nap",2
+2019-03-25,"bad","friends | travel | eat out | facetime | homework | cleaning",2
+2019-03-24,"rad","relax | friends | travel | eat out | cleaning",5
+2019-03-23,"rad","relax | friends | travel | eat out | test",5
+2019-03-22,"good","relax | friends | travel | eat out | homework",4
+2019-03-21,"good","relax | friends | travel | eat out | cleaning",4
+2019-03-20,"good","friends | travel | eat out | homework | volunteering",4
+2019-03-19,"rad","friends | travel | eat out | facetime",5
+2019-03-18,"good","friends | travel | eat out | facetime | homework | bujo",4
+2019-03-17,"rad","relax | friends | travel | eat out | bujo",5
+2019-03-16,"rad","relax | friends | travel | eat out | bujo | nap",5
+2019-03-15,"good","relax | friends | facetime | volunteering | nap",4
+2019-03-14,"good","relax | friends | eat out | homework | bujo | nap",4
+2019-03-13,"stressed","facetime | homework | test",3
+2019-03-12,"stressed","relax | friends | eat out | facetime | homework | soccer | bleeding",3
+2019-03-11,"stressed","friends | homework | soccer | cleaning",3
+2019-03-10,"stressed","friends | eat out | facetime | homework | reffing",3
+2019-03-09,"good","relax | friends | travel | eat out | homework | reffing",4
+2019-03-08,"good","relax | friends | eat out | facetime | homework",4
+2019-03-07,"rad","relax | friends | travel | eat out | facetime | homework",5
+2019-03-06,"good","relax | eat out | game/meet",4
+2019-03-06,"meh","facetime | homework | bujo | nap",3
+2019-03-05,"awful",NA,1
+2019-03-05,"rad","friends | travel | homework | nap",5
+2019-03-04,"good","friends | travel | eat out | homework",4
+2019-03-03,"rad","relax | friends | eat out | homework | bujo",5
+2019-03-02,"good","relax | friends | travel | homework",4
+2019-03-01,"good","friends | homework | babysitting",4
+2019-02-28,"meh","friends | eat out",3
+2019-02-27,"good","homework | nap",4
+2019-02-26,"good","friends | eat out | homework | bujo",4
+2019-02-25,"good","friends | homework",4
+2019-02-24,"good","friends | eat out | homework",4
+2019-02-23,"good","relax | friends | travel | eat out",4
+2019-02-22,"bad","relax | friends | eat out | homework | sick",2
+2019-02-21,"awful","homework",1
+2019-02-20,"rad","relax | eat out | date | homework",5
+2019-02-19,"good","homework | bujo",4
+2019-02-18,"good","friends | travel | homework",4
+2019-02-17,"meh","friends | eat out | reffing",3
+2019-02-16,"meh","homework | reffing | cleaning",3
+2019-02-15,"good","relax | date | weightlifting",4
+2019-02-14,"rad","relax | friends | date | homework",5
+2019-02-13,"rad","date | weightlifting",5
+2019-02-12,"good","date",4
+2019-02-11,"bad","homework | bujo | sick",2
+2019-02-10,"bad","relax | homework | babysitting | cleaning",2
+2019-02-09,"good","relax | friends | travel | eat out | homework",4
+2019-02-08,"rad","relax | eat out | date",5
+2019-02-07,"meh","homework | weightlifting",3
+2019-02-06,"good","relax | friends | eat out | date",4
+2019-02-05,"good","relax | friends | homework | game/meet",4
+2019-02-04,"good","homework",4
+2019-02-03,"meh","eat out | homework | cleaning",3
+2019-02-02,"rad","relax | friends | travel | eat out | date | homework",5
+2019-02-01,"bad","relax | eat out | bujo",2
+2019-01-31,"meh","relax | homework | bujo",3
+2019-01-30,"rad","date | homework | bujo | game/meet",5
+2019-01-29,"good","relax | friends | eat out | homework",4
+2019-01-28,"meh","homework",3
+2019-01-27,"meh","relax | homework | bujo | sick",3
+2019-01-26,"good","relax | date | homework | bujo",4
+2019-01-25,"rad","relax | friends | eat out | date",5
+2019-01-24,"bad","friends | eat out | game/meet | soccer",2
+2019-01-23,"meh","relax | date | homework | soccer",3
+2019-01-22,"good","relax | eat out | homework | game/meet | soccer",4
+2019-01-21,"good","relax | friends | homework",4
+2019-01-20,"rad","relax | eat out | date | weightlifting",5
+2019-01-19,"good","relax | friends | travel | game/meet | weightlifting | sick",4
+2019-01-18,"rad","relax | friends | date",5
+2019-01-17,"good","friends | homework | game/meet | soccer",4
+2019-01-16,"good","relax | soccer | cleaning",4
+2019-01-15,"meh","relax | date | homework",3
+2019-01-14,"good","homework | soccer",4
+2019-01-13,"meh","homework | babysitting",3
+2019-01-12,"good","relax | friends | homework | babysitting",4
+2019-01-11,"good","relax | friends | date",4
+2019-01-10,"good","friends | homework | game/meet | soccer",4
+2019-01-09,"meh","homework | soccer",3
+2019-01-08,"meh","friends | homework | game/meet | soccer",3
+2019-01-07,"meh","date | homework | cleaning",3
+2019-01-06,"bad","homework | cleaning",2
+2019-01-05,"meh","homework",3
+2019-01-04,"rad","relax | date",5
+2019-01-03,"good","relax | friends | soccer",4
+2019-01-02,"good","relax | friends | travel | date",4
+2019-01-01,"rad","relax | friends | date",5
+2018-12-31,"rad","relax | friends | date",5
+2018-12-30,"rad","date",5
+2018-12-29,"rad","travel",5
+2018-12-28,"good","relax | date | weightlifting | cleaning",4
+2018-12-27,"good","relax | friends | weightlifting | babysitting",4
+2018-12-26,"good","relax | friends",4
+2018-12-25,"rad","relax | date",5
+2018-12-24,"good","relax | friends | date | cleaning",4
+2018-12-23,"awful","travel",1
+2018-12-22,"meh","relax | travel",3
+2018-12-21,"rad","relax | friends | date",5
+2018-12-20,"meh","relax | weightlifting | cleaning",3
+2018-12-19,"bad","relax | friends | date",2
+2018-12-18,"good","relax | friends | homework | weightlifting",4
+2018-12-17,"meh","friends | homework | weightlifting",3
+2018-12-16,"meh","homework",3
+2018-12-15,"rad","relax | friends | date",5
+2018-12-14,"good","relax | friends",4
+2018-12-13,"good","friends | homework | game/meet | soccer",4
+2018-12-12,"awful","travel | homework | weightlifting | sick",1
+2018-12-11,"rad","friends | homework | game/meet | soccer",5
+2018-12-10,"meh","homework | game/meet | soccer",3
+2018-12-09,"bad","homework | babysitting",2
+2018-12-08,"good","relax | date | homework",4
+2018-12-07,"meh","relax | friends | homework",3
+2018-12-06,"awful","homework | game/meet | soccer | sick",1
+2018-12-05,"meh","homework | soccer",3
+2018-12-04,"bad","relax | homework",2
+2018-12-03,"good","relax | date | homework",4
+2018-12-02,"meh","homework",3
+2018-12-01,"meh","relax | travel | date | homework | test",3
+2018-11-30,"good","relax | friends",4
+2018-11-29,"meh","friends | homework | game/meet | soccer",3
+2018-11-28,"meh","homework | game/meet | weightlifting | soccer",3
+2018-11-27,"good","relax | homework | game/meet | soccer",4
+2018-11-26,"bad","homework | game/meet | weightlifting",2
+2018-11-25,"bad","friends | homework | cleaning",2
+2018-11-24,"awful","homework | weightlifting",1
+2018-11-23,"rad","relax | travel | date",5
+2018-11-22,"rad","relax | friends | date",5
+2018-11-21,"good","relax | friends | date | homework",4
+2018-11-20,"meh","weightlifting",3
+2018-11-19,"good","friends | date | weightlifting | soccer",4
+2018-11-18,"good","relax | friends | date | homework",4
+2018-11-17,"meh","homework",3
+2018-11-16,"good","relax | friends",4
+2018-11-15,"rad","relax | friends | date | homework | game/meet | soccer",5
+2018-11-14,"meh","game/meet | weightlifting | soccer",3
+2018-11-13,"good","date | homework | game/meet | soccer",4
+2018-11-12,"meh","homework | game/meet | weightlifting",3
+2018-11-11,"meh","relax | friends",3
+2018-11-10,"meh","relax | friends | date | game/meet | reffing",3
+2018-11-09,"rad","relax | friends | date",5
+2018-11-08,"meh","homework | game/meet | weightlifting | soccer | cleaning",3
+2018-11-07,"good","homework | game/meet | weightlifting",4
+2018-11-06,"awful","homework | weightlifting",1
+2018-11-05,"rad","relax | friends | homework | game/meet | weightlifting | soccer",5
+2018-11-04,"good","relax | date | homework",4
+2018-11-03,"rad","relax | friends | travel | date",5
+2018-11-02,"awful",NA,1
+2018-11-01,"rad","relax | friends | homework | game/meet | weightlifting | soccer",5
+2018-10-31,"good","relax | homework",4
+2018-10-30,"rad","date | homework | game/meet | weightlifting | soccer",5
+2018-10-29,"awful","homework | weightlifting | soccer",1
+2018-10-28,"good","relax | homework | reffing",4
+2018-10-27,"good","relax | friends | date | reffing",4
+2018-10-26,"bad","homework",2
+2018-10-25,"meh","homework | game/meet | soccer",3
+2018-10-24,"rad","relax | friends | homework | game/meet | soccer",5
+2018-10-23,"meh","homework | game/meet | soccer",3
+2018-10-22,"meh","homework | game/meet | soccer",3
+2018-10-21,"good","date | homework",4
+2018-10-20,"meh","relax | friends | travel | date | homework",3
+2018-10-19,"good","relax | date",4
+2018-10-18,"meh","homework | game/meet | weightlifting | sick",3
+2018-10-17,"awful","homework | game/meet | weightlifting | soccer | sick",1
+2018-10-16,"bad","homework | game/meet | weightlifting | sick",2
