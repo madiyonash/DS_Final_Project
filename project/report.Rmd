@@ -33,9 +33,9 @@ report_2019 <- clean_report %>%
 
 If you take a glance at the `activities` column, you may notice that the observations have a varying number of activities. Here is a sample of some of the observations:
 ```{r}
-#set seed value to birthday of my dad, for giggles
+#set seed value to birthday of my cat, for giggles
 
-set.seed(19720223)
+set.seed(20170601)
 report_2019 %>% 
   select(activities) %>% 
   sample_n(5)
@@ -44,7 +44,9 @@ report_2019 %>%
 To make it easier to work with this data, we can separate the activities so that each activity is contained within its own observation:
 ```{r}
 report_2019_sep <- report_2019 %>% 
-  separate_rows(activities, sep = "\\|")
+  separate_rows(activities, sep = "\\|") 
+
+report_2019_sep$activities <- trimws(report_2019_sep$activities, which = c("both"))
 
 #print sample of this report
 report_2019_sep %>% 
@@ -96,7 +98,35 @@ avg_daily_rain <- read_csv("C:/Users/madis/Documents/intro to ds/final_project/D
 
 
 ## Univariate Data Analysis
+First, let's see how my year was overall.
+```{r}
+report_2019 %>% 
+  ggplot() +
+  geom_bar(mapping = aes(mood_scale)) +
+  labs(title = "Frequency of Moods", x = "Mood", y = "Number of Times Observed") +
+  theme_minimal()
+```
 
+Let's see what kinds of things I did over the year.
+```{r}
+#find how frequently i did different things
+report_2019_sep %>%
+  group_by(activities) %>% 
+  summarize(count = n()) %>% 
+  arrange(desc(count))
+```
+... It's a bit sad that my most frequent activity was doing homework...
+
+
+Moving on, let's create a visualization of the frequency I completed different activities:
+```{r}
+report_2019_sep %>%
+  ggplot() +
+  geom_bar(mapping = aes(activities)) +
+  coord_flip() +
+  theme_minimal() +
+  labs(title = "Frequency of Activities", x = "Number of Days", y = "Activity")
+```
 
 
 ## Bivariate Data Analysis
@@ -104,7 +134,9 @@ Let's try and graph my average daily mood over the course of the year.
 ```{r}
 report_2019_day %>% 
   ggplot() +
-  geom_line(mapping = aes(x = date, y = ave_mood))
+  geom_line(mapping = aes(x = date, y = ave_mood)) +
+  labs(title = "Change in Daily Mood Throughout the Year", y = "Daily Average Mood",
+       x = "Date")
 ```
 
 
@@ -117,34 +149,40 @@ create a function to find average mood by month
   
 ```{r}
 # make additional columns for month and day
-report_2019_long <- report_2019_day %>% 
+report_2019_months <- report_2019_day %>% 
   mutate(day = format(report_2019_day$date, "%d")) %>% 
   mutate(month = month(ymd(date), label = T)) %>% 
   select(ave_mood, month, day)
-report_2019_long$day <- as.numeric(report_2019_long$day)
-
-#visualize data
-report_2019_long %>%
-  ggplot( aes(x=day, y=ave_mood, group=month, color=month)) +
-    geom_line() 
-
+report_2019_months$day <- as.numeric(report_2019_months$day)
 ```
+
+```{r}
+#visualize data
+report_2019_months %>%
+  ggplot( aes(x=day, y=ave_mood, group=month, color=month)) +
+    geom_line() +
+  ggtitle("Average Mood by Month") +
+  labs(x = "Day", y ="Average Daily Mood") +
+  theme_minimal()
+```
+
 
 That's still ugly. Let's try again:
 
 ```{r}
 # try again
-tmp <- report_2019_long %>% 
+tmp <- report_2019_months %>% 
   mutate(month2 = month)
 
 tmp %>%
   ggplot( aes(x=day, y=ave_mood)) +
     geom_line( data=tmp %>% dplyr::select(-month), aes(group=month2), color="grey", size=0.5, alpha=0.5) +
-    geom_line( aes(color=month), color="#69b3a2", size=1.2 )+
-    ggtitle("How each month's mood compares") +
+    geom_line( aes(color=month), color="#4e08a8", size=1.2 )+
+    labs(title = "How Each Month's Daily Mood Compares",
+         x = "Day", 
+         y ="Average Daily Mood") +
     facet_wrap(~month)
 ```
-
 I think that's pretty neat!
 ## Data Analysis
 
