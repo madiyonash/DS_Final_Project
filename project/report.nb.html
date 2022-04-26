@@ -236,19 +236,87 @@ library(lubridate)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Import data:</p>
+<p>Import data, which can be found <a href="https://github.com/madiyonash/DS_Final_Project/blob/master/data/clean_report.csv">here</a>:</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xlYW5fcmVwb3J0IDwtIHJlYWQuY3N2KClcbmBgYCJ9 -->
-<pre class="r"><code>clean_report &lt;- read.csv()</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xlYW5fcmVwb3J0IDwtIHJlYWRfY3N2KFwiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL21hZGl5b25hc2gvRFNfRmluYWxfUHJvamVjdC9tYXN0ZXIvZGF0YS9jbGVhbl9yZXBvcnQuY3N2P3Rva2VuPUdIU0FUMEFBQUFBQUJUSUtZTk1TNFdCRkVGTFNPRzJUQjJTWVRIREdJUVwiKVxuYGBgIn0= -->
+<pre class="r"><code>clean_report &lt;- read_csv(&quot;https://raw.githubusercontent.com/madiyonash/DS_Final_Project/master/data/clean_report.csv?token=GHSAT0AAAAAABTIKYNMS4WBFEFLSOG2TB2SYTHDGIQ&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUm93czogODIwIENvbHVtbnM6IDRcbi0tIENvbHVtbiBzcGVjaWZpY2F0aW9uIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbkRlbGltaXRlcjogXCIsXCJcbmNociAgKDIpOiBtb29kLCBhY3Rpdml0aWVzXG5kYmwgICgxKTogbW9vZF9zY2FsZVxuZGF0ZSAoMSk6IGRhdGVcblxuaSBVc2UgYHNwZWMoKWAgdG8gcmV0cmlldmUgdGhlIGZ1bGwgY29sdW1uIHNwZWNpZmljYXRpb24gZm9yIHRoaXMgZGF0YS5cbmkgU3BlY2lmeSB0aGUgY29sdW1uIHR5cGVzIG9yIHNldCBgc2hvd19jb2xfdHlwZXMgPSBGQUxTRWAgdG8gcXVpZXQgdGhpcyBtZXNzYWdlLlxuIn0= -->
+<pre><code>Rows: 820 Columns: 4
+-- Column specification -------------------------------------------------------------------
+Delimiter: &quot;,&quot;
+chr  (2): mood, activities
+dbl  (1): mood_scale
+date (1): date
+
+i Use `spec()` to retrieve the full column specification for this data.
+i Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>To analyze the data from 2019, we must filter the dataset for entries taken during that year. The use of the <code>lubridate</code> package makes this easy:</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucmVwb3J0XzIwMTkgPC0gY2xlYW5fcmVwb3J0ICU+JSBcbiAgZmlsdGVyKGJldHdlZW4oZGF0ZSwgYXMuRGF0ZShcIjIwMTktMDEtMDFcIiksIGFzLkRhdGUoXCIyMDE5LTEyLTMxXCIpKSlcbmBgYCJ9 -->
+<pre class="r"><code>report_2019 &lt;- clean_report %&gt;% 
+  filter(between(date, as.Date(&quot;2019-01-01&quot;), as.Date(&quot;2019-12-31&quot;)))</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<p>If you take a glance at the <code>activities</code> column, you may notice that the observations have a varying number of activities. Here is a sample of some of the observations:</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI3JlYWQgZGF0YSBmcm9tIGZpbGUgXG5gYGAifQ== -->
-<pre class="r"><code>#read data from file </code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucmVwb3J0XzIwMTkgJT4lIFxuICBzZWxlY3QoYWN0aXZpdGllcykgJT4lIFxuICBzYW1wbGVfbig1KVxuYGBgIn0= -->
+<pre class="r"><code>report_2019 %&gt;% 
+  select(activities) %&gt;% 
+  sample_n(5)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6NSwibmNvbCI6MSwic3VtbWFyeSI6eyJBIHRpYmJsZSI6WyI1IHggMSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUJuMVN5MjZETUJBMDVGRUZxVldrL0VEdVZaQ1NOcWNlMncrb2NzcDFBd3RZTVRZeXprdnFvZjlkS1hRaGRpSkkxWVBON0hwbWR0ZDQ5YkYrQ2RZQlk2ekgrcDdQZWdPQ2JQaitPVjhzRjR6MWZZbzgxbWVqK25zazFxUkpNRGFtTmJBSE00MENqdE92YWFJNXlyZ2taRFRzVVJCQU1GTzFNNFEyQWpIbU1yV2k1M3ZSalp1cEhBOUtid21XUE5wYXlkdS8vZ2xFYUhpT2JYa2tFT1N0NnVwYTljWk9JT2ZpVkpmS1ZGRVFsMkFNcG1OMFFKNW1SdkRFWEJqcEthZGRRbUdkbDg3NXo5WnNCV3RiejJURjdTc2VTTWl4dE5mcmtnRkVodSs1NGZWSml6N1M2aEE2eVNNdC81dTJxcXArdXI2UmdQTE9sN3FCTU5Ha3AramNrVHlvd25BbFNlUlBtbi9kRm51Nmt4anZaTjFKUEl1eW5kek81cTkxQmZ0WW1HM1BzMFlPZTVlYWZ0VjVVRU9VS1pmb21oZXdRV0dESnhxNW1UZ3NOSmZHalVMWk1qVEtnT01Ga1JJdTB3ekh6cjlINDZmQzdBSUFBQT09In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["activities"],"name":[1],"type":["chr"],"align":["left"]}],"data":[{"1":"relax | friends | travel | eat out | bleeding"},{"1":"relax | friends | eat out | homework | sick"},{"1":"friends | travel | eat out | facetime | homework | cleaning"},{"1":"relax | facetime | family | shopping | date | homework | weightlifting | gym | nap"},{"1":"relax | travel | eat out | family | date | sick | nap"}],"options":{"columns":{"min":{},"max":[10],"total":[1]},"rows":{"min":[10],"max":[10],"total":[5]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>To make it easier to work with this data, we can separate the activities so that each activity is contained within its own observation:</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucmVwb3J0XzIwMTlfc2VwIDwtIHJlcG9ydF8yMDE5ICU+JSBcbiAgc2VwYXJhdGVfcm93cyhhY3Rpdml0aWVzLCBzZXAgPSBcIlxcXFx8XCIpXG5cbiNwcmludCBzYW1wbGUgb2YgdGhpcyByZXBvcnRcbnJlcG9ydF8yMDE5X3NlcCAlPiUgXG4gIHNlbGVjdChhY3Rpdml0aWVzKSAlPiUgXG4gIHNhbXBsZV9uKDUpXG5gYGAifQ== -->
+<pre class="r"><code>report_2019_sep &lt;- report_2019 %&gt;% 
+  separate_rows(activities, sep = &quot;\\|&quot;)
+
+#print sample of this report
+report_2019_sep %&gt;% 
+  select(activities) %&gt;% 
+  sample_n(5)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6NSwibmNvbCI6MSwic3VtbWFyeSI6eyJBIHRpYmJsZSI6WyI1IHggMSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUJtVlFVVzdDTUF4MVFzdG9wVTFJWENBWG9OS0tPTUYyZ0dsZi9HWWxRRVNhb0RTczI5L3VQWW5PNlJKdGhBOG45ck9mN2VmWDU4MnEzSlFBTUlHTVVKams2TUwwNmVXeFh0Y0FHY1dJUUFhRi96K3dhakVDQUhPMFBDU21yRGYyeUVKVXNFWUpycVhlQjJER2RyeVY2dk92NE5DekxYZmlIMkJhNFhza0UzUE5XOUdGYVJFc2VlUGt1M1RTWjY3S0MydjZLbEx1MGVnWFBzTXdmS2Q5RzhXN203NjRFcTkyRnZrWVhSTEtuVGs1YVRTUzZHS1VmazBtTmdIbVorMDMyUzZidzFrZmwvWEtUd2kzZzdBZUNZMmlUMzVuMGlHOXI5QjdxVVZjWHZFM29VTHdnSkpIeGRYSlN1MmlGRVM3eWhuSFkxM1pHQldSVVJ4Y2ZnQ0Q0QVlSK3dFQUFBPT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["activities"],"name":[1],"type":["chr"],"align":["left"]}],"data":[{"1":"work"},{"1":"cleaning"},{"1":"family"},{"1":"hw date"},{"1":"homework"}],"options":{"columns":{"min":{},"max":[10],"total":[1]},"rows":{"min":[10],"max":[10],"total":[5]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Additionally, we can create an additional column that summarizes the average the mood per day. This will let us compare the rating of any particular day in 2019 with other factors.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucmVwb3J0XzIwMTlfZGF5IDwtIHJlcG9ydF8yMDE5ICU+JSBcbiAgZ3JvdXBfYnkoZGF0ZSkgJT4lIFxuICBzdW1tYXJpemUoYXZlX21vb2QgPSBtZWFuKG1vb2Rfc2NhbGUsIG5hLnJtPVQpKVxuZ2xpbXBzZShyZXBvcnRfMjAxOV9kYXkpXG5gYGAifQ== -->
+<pre class="r"><code>report_2019_day &lt;- report_2019 %&gt;% 
+  group_by(date) %&gt;% 
+  summarize(ave_mood = mean(mood_scale, na.rm=T))
+glimpse(report_2019_day)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUm93czogMzY1XG5Db2x1bW5zOiAyXG4kIGRhdGUgICAgIDxkYXRlPiAyMDE5LTAxLTAxLCAyMDE5LTAxLTAyLCAyMDE5LTAxLTAzLCAyMDE5LTAxLTA0LCAyMDE5LTAxLTA1LCAyMDE5LTAxLTA2LH5cbiQgYXZlX21vb2QgPGRibD4gNSwgNCwgNCwgNSwgMywgMiwgMywgMywgMywgNCwgNCwgNCwgMywgNCwgMywgNCwgNCwgNSwgNCwgNSwgNCwgNCwgMywgMiwgflxuIn0= -->
+<pre><code>Rows: 365
+Columns: 2
+$ date     &lt;date&gt; 2019-01-01, 2019-01-02, 2019-01-03, 2019-01-04, 2019-01-05, 2019-01-06,~
+$ ave_mood &lt;dbl&gt; 5, 4, 4, 5, 3, 2, 3, 3, 3, 4, 4, 4, 3, 4, 3, 4, 4, 5, 4, 5, 4, 4, 3, 2, ~</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -275,7 +343,7 @@ library(lubridate)</code></pre>
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIkZpbmFsIFJlcG9ydCBmb3IgSW50cm8gdG8gRGF0YSBTY2llbmNlIg0Kb3V0cHV0OiBodG1sX25vdGVib29rDQotLS0NCiMgVGVhbSBNZW1iZXJzDQoqIFtNYWRpc29uIFlvbmFzaF0obWFpbHRvOm15b25hc2g4OTAyQGZsb3JpZGFwb2x5LmVkdSkNCg0KIyBJbnRyb2R1Y3Rpb24NCg0KDQojICpUaWR5aW5nKiBVcCB0aGUgRGF0YQ0KDQpTaW5jZSB0aGUgZGF0YSBpbml0aWFsbHkgY2FtZSBmcm9tIGFsbCB5ZWFycyB0aGF0IEkgaGF2ZSB1c2VkIHRoZSBhcHAsIGl0IGlzIGltcG9ydGFudCB0byBtYWtlIHRoZSBkYXRhIHRpZHkgYW5kIGVhc2llciB0byB3b3JrIHdpdGguDQoNCkxvYWQgbmVjZXNzYXJ5IHBhY2thZ2VzOiANCmBgYHtyfQ0KbGlicmFyeSh0aWR5dmVyc2UpDQpsaWJyYXJ5KGx1YnJpZGF0ZSkNCmBgYA0KDQpJbXBvcnQgZGF0YToNCmBgYHtyfQ0KY2xlYW5fcmVwb3J0IDwtIHJlYWQuY3N2KCkNCmBgYA0KDQoNCmBgYHtyfQ0KI3JlYWQgZGF0YSBmcm9tIGZpbGUgDQpgYGANCg0KDQoNCiMgRGF0YSBEZXNjcmlwdGlvbg0KDQojIEV4cGxvcmF0b3J5IERhdGEgQW5hbHlzaXMNCg0KIyMgVW5pdmFyaWF0ZSBEYXRhIEFuYWx5c2lzDQoNCiMjIEJpdmFyaWF0ZSBEYXRhIEFuYWx5c2lzDQoNCiMjIERhdGEgQW5hbHlzaXMNCg0KIyBDb25jbHVzaW9uDQoNCiMgQ2l0YXRpb24gb2YgRGF0YQ0KDQo=</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIkZpbmFsIFJlcG9ydCBmb3IgSW50cm8gdG8gRGF0YSBTY2llbmNlIg0Kb3V0cHV0OiBodG1sX25vdGVib29rDQotLS0NCiMgVGVhbSBNZW1iZXJzDQoqIFtNYWRpc29uIFlvbmFzaF0obWFpbHRvOm15b25hc2g4OTAyQGZsb3JpZGFwb2x5LmVkdSkNCg0KIyBJbnRyb2R1Y3Rpb24NCg0KDQojICpUaWR5aW5nKiBVcCB0aGUgRGF0YQ0KDQpTaW5jZSB0aGUgZGF0YSBpbml0aWFsbHkgY2FtZSBmcm9tIGFsbCB5ZWFycyB0aGF0IEkgaGF2ZSB1c2VkIHRoZSBhcHAsIGl0IGlzIGltcG9ydGFudCB0byBtYWtlIHRoZSBkYXRhIHRpZHkgYW5kIGVhc2llciB0byB3b3JrIHdpdGguDQoNCkxvYWQgbmVjZXNzYXJ5IHBhY2thZ2VzOiANCmBgYHtyfQ0KbGlicmFyeSh0aWR5dmVyc2UpDQpsaWJyYXJ5KGx1YnJpZGF0ZSkNCmBgYA0KDQpJbXBvcnQgZGF0YSwgd2hpY2ggY2FuIGJlIGZvdW5kIFtoZXJlXShodHRwczovL2dpdGh1Yi5jb20vbWFkaXlvbmFzaC9EU19GaW5hbF9Qcm9qZWN0L2Jsb2IvbWFzdGVyL2RhdGEvY2xlYW5fcmVwb3J0LmNzdik6DQpgYGB7cn0NCmNsZWFuX3JlcG9ydCA8LSByZWFkX2NzdigiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL21hZGl5b25hc2gvRFNfRmluYWxfUHJvamVjdC9tYXN0ZXIvZGF0YS9jbGVhbl9yZXBvcnQuY3N2P3Rva2VuPUdIU0FUMEFBQUFBQUJUSUtZTk1TNFdCRkVGTFNPRzJUQjJTWVRIREdJUSIpDQpgYGANCg0KVG8gYW5hbHl6ZSB0aGUgZGF0YSBmcm9tIDIwMTksIHdlIG11c3QgZmlsdGVyIHRoZSBkYXRhc2V0IGZvciBlbnRyaWVzIHRha2VuIGR1cmluZyB0aGF0IHllYXIuIFRoZSB1c2Ugb2YgdGhlIGBsdWJyaWRhdGVgIHBhY2thZ2UgbWFrZXMgdGhpcyBlYXN5OiANCmBgYHtyfQ0KcmVwb3J0XzIwMTkgPC0gY2xlYW5fcmVwb3J0ICU+JSANCiAgZmlsdGVyKGJldHdlZW4oZGF0ZSwgYXMuRGF0ZSgiMjAxOS0wMS0wMSIpLCBhcy5EYXRlKCIyMDE5LTEyLTMxIikpKQ0KYGBgDQoNCklmIHlvdSB0YWtlIGEgZ2xhbmNlIGF0IHRoZSBgYWN0aXZpdGllc2AgY29sdW1uLCB5b3UgbWF5IG5vdGljZSB0aGF0IHRoZSBvYnNlcnZhdGlvbnMgaGF2ZSBhIHZhcnlpbmcgbnVtYmVyIG9mIGFjdGl2aXRpZXMuIEhlcmUgaXMgYSBzYW1wbGUgb2Ygc29tZSBvZiB0aGUgb2JzZXJ2YXRpb25zOg0KYGBge3J9DQpyZXBvcnRfMjAxOSAlPiUgDQogIHNlbGVjdChhY3Rpdml0aWVzKSAlPiUgDQogIHNhbXBsZV9uKDUpDQpgYGANCg0KVG8gbWFrZSBpdCBlYXNpZXIgdG8gd29yayB3aXRoIHRoaXMgZGF0YSwgd2UgY2FuIHNlcGFyYXRlIHRoZSBhY3Rpdml0aWVzIHNvIHRoYXQgZWFjaCBhY3Rpdml0eSBpcyBjb250YWluZWQgd2l0aGluIGl0cyBvd24gb2JzZXJ2YXRpb246DQpgYGB7cn0NCnJlcG9ydF8yMDE5X3NlcCA8LSByZXBvcnRfMjAxOSAlPiUgDQogIHNlcGFyYXRlX3Jvd3MoYWN0aXZpdGllcywgc2VwID0gIlxcfCIpDQoNCiNwcmludCBzYW1wbGUgb2YgdGhpcyByZXBvcnQNCnJlcG9ydF8yMDE5X3NlcCAlPiUgDQogIHNlbGVjdChhY3Rpdml0aWVzKSAlPiUgDQogIHNhbXBsZV9uKDUpDQpgYGANCg0KQWRkaXRpb25hbGx5LCB3ZSBjYW4gY3JlYXRlIGFuIGFkZGl0aW9uYWwgY29sdW1uIHRoYXQgc3VtbWFyaXplcyB0aGUgYXZlcmFnZSB0aGUgbW9vZCBwZXIgZGF5LiBUaGlzIHdpbGwgbGV0IHVzIGNvbXBhcmUgdGhlIHJhdGluZyBvZiBhbnkgcGFydGljdWxhciBkYXkgaW4gMjAxOSB3aXRoIG90aGVyIGZhY3RvcnMuDQpgYGB7cn0NCnJlcG9ydF8yMDE5X2RheSA8LSByZXBvcnRfMjAxOSAlPiUgDQogIGdyb3VwX2J5KGRhdGUpICU+JSANCiAgc3VtbWFyaXplKGF2ZV9tb29kID0gbWVhbihtb29kX3NjYWxlLCBuYS5ybT1UKSkNCmdsaW1wc2UocmVwb3J0XzIwMTlfZGF5KQ0KYGBgDQoNCg0KIyBEYXRhIERlc2NyaXB0aW9uDQoNCiMgRXhwbG9yYXRvcnkgRGF0YSBBbmFseXNpcw0KDQojIyBVbml2YXJpYXRlIERhdGEgQW5hbHlzaXMNCg0KIyMgQml2YXJpYXRlIERhdGEgQW5hbHlzaXMNCg0KIyMgRGF0YSBBbmFseXNpcw0KDQojIENvbmNsdXNpb24NCg0KIyBDaXRhdGlvbiBvZiBEYXRhDQoNCg==</div>
 
 
 

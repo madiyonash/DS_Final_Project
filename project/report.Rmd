@@ -18,16 +18,42 @@ library(tidyverse)
 library(lubridate)
 ```
 
-Import data:
+Import data, which can be found [here](https://github.com/madiyonash/DS_Final_Project/blob/master/data/clean_report.csv):
 ```{r}
-clean_report <- read.csv()
+clean_report <- read_csv("https://raw.githubusercontent.com/madiyonash/DS_Final_Project/master/data/clean_report.csv?token=GHSAT0AAAAAABTIKYNMS4WBFEFLSOG2TB2SYTHDGIQ")
 ```
 
-
+To analyze the data from 2019, we must filter the dataset for entries taken during that year. The use of the `lubridate` package makes this easy: 
 ```{r}
-#read data from file 
+report_2019 <- clean_report %>% 
+  filter(between(date, as.Date("2019-01-01"), as.Date("2019-12-31")))
 ```
 
+If you take a glance at the `activities` column, you may notice that the observations have a varying number of activities. Here is a sample of some of the observations:
+```{r}
+report_2019 %>% 
+  select(activities) %>% 
+  sample_n(5)
+```
+
+To make it easier to work with this data, we can separate the activities so that each activity is contained within its own observation:
+```{r}
+report_2019_sep <- report_2019 %>% 
+  separate_rows(activities, sep = "\\|")
+
+#print sample of this report
+report_2019_sep %>% 
+  select(activities) %>% 
+  sample_n(5)
+```
+
+Additionally, we can create an additional column that summarizes the average the mood per day. This will let us compare the rating of any particular day in 2019 with other factors.
+```{r}
+report_2019_day <- report_2019 %>% 
+  group_by(date) %>% 
+  summarize(ave_mood = mean(mood_scale, na.rm=T))
+glimpse(report_2019_day)
+```
 
 
 # Data Description
