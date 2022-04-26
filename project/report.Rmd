@@ -14,13 +14,15 @@ Since the data initially came from all years that I have used the app, it is imp
 
 Load necessary packages: 
 ```{r}
-library(tidyverse)
-library(lubridate)
+library(tidyverse) 
+library(lubridate) #date and time
 ```
 
+
+## Working with the Dailyo Data
 Import data, which can be found [here](https://github.com/madiyonash/DS_Final_Project/blob/master/data/clean_report.csv):
 ```{r}
-clean_report <- read_csv("https://raw.githubusercontent.com/madiyonash/DS_Final_Project/master/data/clean_report.csv?token=GHSAT0AAAAAABTIKYNMS4WBFEFLSOG2TB2SYTHDGIQ")
+clean_report <- read_csv("C:/Users/madis/Documents/intro to ds/final_project/DS_Final_Project/data/clean_report.csv")
 ```
 
 To analyze the data from 2019, we must filter the dataset for entries taken during that year. The use of the `lubridate` package makes this easy: 
@@ -31,6 +33,9 @@ report_2019 <- clean_report %>%
 
 If you take a glance at the `activities` column, you may notice that the observations have a varying number of activities. Here is a sample of some of the observations:
 ```{r}
+#set seed value to birthday of my dad, for giggles
+
+set.seed(19720223)
 report_2019 %>% 
   select(activities) %>% 
   sample_n(5)
@@ -52,18 +57,95 @@ Additionally, we can create an additional column that summarizes the average the
 report_2019_day <- report_2019 %>% 
   group_by(date) %>% 
   summarize(ave_mood = mean(mood_scale, na.rm=T))
+
+#lets take a look at what this summary looks like
 glimpse(report_2019_day)
 ```
 
+## Additional Datasets
+
+We will also be doing some exploratory data analysis using some other datasets.
+
+### Mercury in Retrograde
+
+The first dataset deals with mercury in retrograde:
+```{r}
+mercury_in_retrograde <- read_csv("C:/Users/madis/Documents/intro to ds/final_project/DS_Final_Project/data/1990_2020_mercury_retrograde_dataset.csv")
+```
+
+Once again, let's limit this to the year 2019.
+```{r}
+mercury_in_retrograde <- mercury_in_retrograde %>% 
+  filter(between(DATE, as.Date("2019-01-01"), as.Date("2019-12-31")))
+```
+
+### Average Daily Temperature in Jacksonville
+The next two datasets relate to the weather in Jacksonville in 2019 (where I lived at the time). More specifically, it deals with mean temperature and precipitation.
+```{r}
+avg_daily_temp <- read_csv("C:/Users/madis/Documents/intro to ds/final_project/DS_Final_Project/data/2019_mean_temp.csv")
+```
+
+### Average Daily Precipitation
+```{r}
+avg_daily_rain <- read_csv("C:/Users/madis/Documents/intro to ds/final_project/DS_Final_Project/data/2019_precipitation.csv")
+```
 
 # Data Description
 
 # Exploratory Data Analysis
 
+
 ## Univariate Data Analysis
 
-## Bivariate Data Analysis
 
+
+## Bivariate Data Analysis
+Let's try and graph my average daily mood over the course of the year.
+```{r}
+report_2019_day %>% 
+  ggplot() +
+  geom_line(mapping = aes(x = date, y = ave_mood))
+```
+
+
+Wow, that's turbulent!
+
+Let's see how the months compare:
+
+create a function to find average mood by month
+
+  
+```{r}
+# make additional columns for month and day
+report_2019_long <- report_2019_day %>% 
+  mutate(day = format(report_2019_day$date, "%d")) %>% 
+  mutate(month = month(ymd(date), label = T)) %>% 
+  select(ave_mood, month, day)
+report_2019_long$day <- as.numeric(report_2019_long$day)
+
+#visualize data
+report_2019_long %>%
+  ggplot( aes(x=day, y=ave_mood, group=month, color=month)) +
+    geom_line() 
+
+```
+
+That's still ugly. Let's try again:
+
+```{r}
+# try again
+tmp <- report_2019_long %>% 
+  mutate(month2 = month)
+
+tmp %>%
+  ggplot( aes(x=day, y=ave_mood)) +
+    geom_line( data=tmp %>% dplyr::select(-month), aes(group=month2), color="grey", size=0.5, alpha=0.5) +
+    geom_line( aes(color=month), color="#69b3a2", size=1.2 )+
+    ggtitle("How each month's mood compares") +
+    facet_wrap(~month)
+```
+
+I think that's pretty neat!
 ## Data Analysis
 
 # Conclusion
