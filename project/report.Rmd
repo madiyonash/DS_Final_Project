@@ -318,7 +318,7 @@ report_2019_activities %>%
        x = "Activity",
        y = "Average Mood") +
   guides(fill="none") +
-  coord_flip()
+  coord_flip() 
 ```
 
 Another visualization that we can do that relates to this aspect of the investigation is the *distribution* of mood for each activity. Let's make it:
