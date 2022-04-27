@@ -10,7 +10,7 @@ output: html_notebook
 I use a daily journaling app called "Daylio" to track my mood and activities that I have done throughout the day. In 2019, I made the accomplishment of tracking this every single day of the year (with some days having multiple entries). I've always been interested in the data and visualizations that the app has to offer, from creating a color scale of my mood for a particular month to a weekly recap of what happened. However, not all of my questions could be answered by the app itself. I saw that I could download the data as a .csv file, and from there, my exploration of the data began.
 
 The app itself is relatively straightforward: you click one of the "moods" you create (mine included names like "meh", "not good but feel like it should be", etc) (which are inherently factors, even if the app doesn't make it seem like it at first glance!), select activities/traits that apply to your day, and write notes if you would like. 
-For the sake of this report, I omitted the notes I had and created a `mood_scale` (that is a numerical representation of the factors (for ex, multiple moods had the equivalent of a 4/5 so I took this step for my own usability purposes). before uploading the csv file to GitHub. 
+For the sake of this report, I omitted the notes I had and created a `mood_scale` that is a numerical representation of the factors (for ex, multiple moods had the equivalent of a 4/5 so I took this step for my own usability purposes). before uploading the csv file to GitHub. 
 
 As a female in her 20s, it is no surprise that I am familiar with astrology. You may have heard the term that X is happening because ["Mercury is in Retrograde."](https://www.cnn.com/cnn-underscored/health-fitness/mercury-retrograde-2022) While I'm by no means an expert on astrological occurrences, I thought it would be fun to do some additional exploration to see if this had any correlation with my mood. I also want to use other data sets with factors that may affect my mood. I found a [super cool GitHub Repo](https://github.com/Paris778/Retrograde-Mercury-Dates-Dataset-1990-2020) that relates to this topic.
 
@@ -342,7 +342,7 @@ This provides some additional insight to the previous visualization of the avera
 For example, Wawa has the highest average daily mood associated with it, but there are significantly less observations of this activity than there are relax, for example.
 
 
-## Data Analysis
+## Research Questions
 Now that we have completed some exploratory data analysis, we can answer some questions about the data. 
 
 ### How was my mood during mercury retrograde? 
@@ -407,16 +407,59 @@ retrograde_weeks %>%
 ```
 I will note, I knew very little about astrology, and nothing about Mercury being in Retrograde in 2019. Do I believe that Mercury caused my emotions to be so turbulent? I can't say so, but it is interesting to look at.
 
-### Does the school year affect the activities performed?
+### How did my mood tend to change on a day-to-day basis?
+Were there any trends in the data over the course of the week? Was I happier on weekends or weekdays? Let's look into this!
+```{r}
+# you may notice, this process is similar to that of displaying the average mood per month
+# before we go into looking at the days, create a new dataframe that is easier to work with
+# make additional column for weekday
 
-Earlier, we found that homework was the most frequent activity. Let's see if we can find the approximate time that summer is based on this.
+report_2019_weeks <- report_2019 %>% 
+  mutate(weekday = wday(date, label = T))
+```
+
+```{r}
+report_2019_weeks %>% 
+  group_by(weekday) %>%
+  summarize(avg_daily_mood = mean(mood_scale), variation = var(mood_scale)) %>% 
+  ggplot() +
+  geom_point(aes(
+    x = weekday,
+    y = avg_daily_mood,
+    size = 3, 
+    color = weekday)) +
+  ylim(1,5) +
+    labs(title = "Average Mood by Weekday",
+         y = "Mood Rating",
+         x = "Day of the Week") +
+  guides(size="none", color = "none") +
+  theme_minimal() 
+```
+
+### Does the school year affect the frequency of activities performed?
+
+Earlier, we found that homework was the most frequent activity. Let's see if we can see the approximate time that summer is based on this. 
+The school year ends in early July and begins in mid-August. Let's plot the occurrence of some school-related activities to see when they are present throughout the year.
 ```{r}
 report_2019_activities %>% 
-  filter(activities == c("homework", "test")) %>% 
+  filter(activities == c("homework", 
+                         "test", 
+                         "hw date",
+                         "game/meet"
+                         )) %>% 
   ggplot() +
-  geom_point(aes(x = date, y = activities))
+  geom_point(aes(x = date, y = activities, color = activities, size = 3), alpha = .5) +
+  guides(size="none", color = "none") +
+  labs(title = "Occurence of School-Related Activities",
+         y = "Activity",
+         x = "Date")
 ```
-# Conclusion
+Here, we see a heavier distribution for these school-related activities during the academic year, with few to no entries of them during the summer. This falls in line with what we expect to see of this chart. 
 
-# Citation of Data
+# Conclusion
+This exploration of my own mood data was both interesting and insightful. I was thoroughly engaged in seeing the variation of the distribution of activities and how these varied depending on what scope we viewed the data. It was also interesting to see how the mood averages changes, whether it was viewed at the daily, weekly, monthly, or yearly level. 
+At the practical level, this investigation challenged me to use the tools we have learned in class and adapt them to meet the needs of our projects. From combining conditional statements with dataframes to improving visualizations with ggplot2, this project covered a large scope of the content and made useful learning the transition from basic useage to application. 
+I found myself being familiar with the steps necessary and understanding the concepts that were needed to manipulate data. Even before writing the code, I noticed I was able to think of what I needed to do. For example, when creating data visualizations, I made mental notes that I would have to `mutate` new columns in order to create facets for better visualization, and it then became the task of applying the syntax that we learned in the correct manner. Knowing the concepts that I was trying to apply and what I wanted to accomplish made this task much easier and streamlined the process of creating summaries and visualizations.
+If I were to continue this project with further investigation, there are a lot more factors that could be considered for exploratory data analysis. One thing that would be interesting to investigate would be what *combinations* of activities led to the highest average mood. In this investigation, we looked into what the mean mood was associated with each activity, but I would be curious to see if certain combinations led themselves to be better or worse. For example, was my day better when I went to the gym and ate out, or went to the gym and hung out with my friends? Additionally, if I continued gathering this data, it would be cool to see how things changed over the years and if there were any trends from certain months year to year or quarters. 
+
 
