@@ -135,11 +135,14 @@ Before beginning our analysis, let's print a summary of the `report_2019` datase
 summary(report_2019)
 ```
 This shows that, despite our 365 days in a year, we have 393 observations.
-It is also interesting to note the mood scale: from here, we see that the mean mood for me overall in 2019 was 3.743/5. Not a bad number!
+It is also interesting to note the mean of the mood scale: from here, we see that in 2019 it was a 3.743/5. Not a bad number! Note that this is averaging all 393 entries and is not finding the mean based on a daily average.
 
 
 ## Univariate Data Analysis
-First, let's see how my feelings stacked up by visualizing the distribution of my moods.
+This section focuses on looking into the mood scale and activities of the reports individually. 
+
+### Mood 
+First, let's see how my feelings stacked up by visualizing the distribution of individual entries of my moods.
 ```{r}
 report_2019 %>% 
   ggplot() +
@@ -147,8 +150,22 @@ report_2019 %>%
   labs(title = "Distribution of Moods", x = "Mood", y = "Count") +
   theme_minimal()
 ```
+We can also compare this to the distribution of the daily average:
+```{r}
+report_2019_day %>% 
+  ggplot() +
+  geom_bar(mapping = aes(ave_mood)) +
+  labs(title = "Distribution of Daily Moods", x = "Mood", y = "Count") +
+  theme_minimal()
+```
+Note that, upon finding the distribution of the daily average, most entries were an integer, however some days had scores that fell between the ranges (ie: there was an entry that was 4/5 in the morning and one that was 3/5 in the evening, therefore the daily mood was 3.5). The number of these is significantly less than the integer entries, however. There are also no entries that had the mood of 4.5.
+```{r}
+report_2019_day %>% 
+  summarize(avg_daily_mood = mean(ave_mood))
+```
+The average daily mood is also slightly higher than the average mood of all entries. 
 
-
+### Activities
 Next, let's see what kinds of things I did over the year.
 ```{r}
 #find how frequently i did different things
@@ -188,7 +205,7 @@ report_2019_day %>%
 
 Wow, that's turbulent! This isn't super insightful, so further breaking down the data may help us learn more about it.
 
-
+### Montly Averages
 Let's see how my mood during the different months in the year compare.
 ```{r}
 # before we go into looking at the months, create a new dataframe that is easier to work with
@@ -226,7 +243,7 @@ report_2019_months %>%
 This gives us an idea of how I was doing, by the mean mood, month to month. It was relatively consistent, with the end of the year being slightly lower. 
 A possible explanation for this was the start of senior year of high school, complete with everything from college applications to International Baccalaureate exams!
 
-
+### Mood Over Each Month
 This, however, does not show us how I was doing within the month itself. 
 Another visualization that we can create could be to show how my mood changed from month to month, comparing the actual changes within the month rather than the mean for the month as a whole.
 ```{r}
@@ -329,13 +346,51 @@ For example, Wawa has the highest average daily mood associated with it, but the
 Now that we have completed some exploratory data analysis, we can answer some questions about the data. 
 
 ### How was my mood during mercury retrograde? 
+This is the fun one that we've been waiting for. First, I will join the mercury dataset to the `report_2019_day` set.
+```{r}
+# join the mercury dataset to the report_2019_day set
+retrograde_mood <- left_join(report_2019_day, mercury_in_retrograde, by = c("date" = "DATE"))
+retrograde_mood <- left_join(retrograde_mood, report_2019, by =  "date")
+```
+
+Find the mean mood for when `isRetrograde` is `TRUE`.
+
+```{r}
+#find normal mood and variation of all entries
+retrograde_mood %>% 
+    summarize(avg_mood = mean(ave_mood), variation = var(ave_mood))
+
+#find mood and variation of all entries when isRetrograde is TRUE
+retrograde_mood %>% 
+  filter(isRetrograde == T) %>% 
+  summarize(avg_mood_r = mean(ave_mood), variation_mood_r = var(ave_mood))
+```
+As we see, the mean mood is slightly lower (3.63) when mercury is in retrograde. Additionally, my mood variation was higher (.94) when mercury was in retrograde. Considering one of the features of mercury retrograde you hear about most is that it makes you feel all over the place, this seems to makes sense!
+
+The question that naturally comes up next is, what happened during those weeks?
+Let's find out:
+```{r}
+retrograde_mood %>% 
+  filter(isRetrograde == T) 
+```
+We can also graph each of these retrogrades:
+```{r}
+retrograde_mood %>% 
+  mutate(week1 = 1 if filter(between(date, as.Date("2019-03-07"), as.Date("2019-03-29")) == T),
+         week2 = filter(between(date, as.Date("2019-07-09"), as.Date("2019-08-01"))),
+         week3 = filter(between(date, as.Date("2019-11-02"), as.Date("2019-11-21"))))
+
+
+```
+
+
 
 ### Does the school year affect the activities performed?
 
 Earlier, we found that homework was the most frequent activity. Let's see if we can find the approximate time that summer is based on this.
 ```{r}
 report_2019_activities %>% 
-  filter(activities == "homework") %>% 
+  filter(activities == c("homework", "test")) %>% 
   ggplot() +
   geom_point(aes(x = date, y = activities))
 ```
