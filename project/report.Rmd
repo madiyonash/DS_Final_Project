@@ -88,6 +88,9 @@ The features of the original 2019 dataset include:
 * mood | character 
 * activities | character
 * mood scale | number
+```{r}
+glimpse(report_2019)
+```
 
 Let's see what a few of my days looked like:
 ```{r}
@@ -98,6 +101,9 @@ report_2019 %>%
 From there, for my own usability purposes, I created two additional dataframes from this report of all 2019 entries. These are `report_2019_sep` and `report_2019_day`
 
 In the `report_2019_sep` data, we have a version of the original dataset, with each observation holding a separate activity category. This was important to do because, as seen [earlier](#tag1), some observations had multiple activities while some had none at all.
+```{r}
+glimpse(report_2019_sep)
+```
 
 ```{r}
 #print sample of this report
@@ -106,7 +112,12 @@ report_2019_sep %>%
 ```
 This will be helpful when looking at possible correlation related to the activities I have done during different days. 
 
-In the `report_2019_sep` data, we have a simpler dataframe. This only includes the date of the observation and the average mood for that particular day. There are 365 observations of this dataset for the 365 days in the year. Let's take a look at it:
+In the `report_2019_sep` data, we have a simpler dataframe. This only includes the date of the observation and the average mood for that particular day. There are 365 observations of this dataset for the 365 days in the year. 
+```{r}
+glimpse(report_2019_day)
+```
+
+Let's take a look at it:
 ```{r}
 #print sample of this report
 report_2019_day %>% 
@@ -123,6 +134,9 @@ Per the Repo:
 * DATE | date format (yyyy/mm/dd)
 * isRetrograde | boolean (0 or 1)
 isRetrograde has a value of 1 (one) when mercury was in retrograde during the respective date and 0 (zero) when it was following a normal course."
+```{r}
+glimpse(mercury_in_retrograde)
+```
 
 The original GitHub Repo also provided a photo of a graphical representation of one of the years (2018) of the data:
 ![](https://raw.githubusercontent.com/Paris778/Retrograde-Mercury-Dates-Dataset-1990-2020/main/screenshots/2018_mercury.png)
