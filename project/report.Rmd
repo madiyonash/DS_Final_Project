@@ -375,26 +375,37 @@ retrograde_mood %>%
 ```
 We can also visualize each of these retrogrades:
 ```{r}
-#trying to visualize it
-retrograde_mood %>% 
+# create col we can use for factors
+retrograde_mood <- retrograde_mood %>% 
   mutate(week = 0)
 
-retrograde_mood$week <- ifelse(retrograde_mood$date == between(date, as.Date("2019-03-07"), as.Date("2019-03-29")),
+retrograde_mood$week <- ifelse(between(retrograde_mood$date, as.Date("2019-03-07"), as.Date("2019-03-29")),
 1, 
 retrograde_mood$week)
 
+retrograde_mood$week <- ifelse(between(retrograde_mood$date, as.Date("2019-07-09"), as.Date("2019-08-01")),
+2, 
+retrograde_mood$week)
 
-  if() {
-      week = 1
-    }
+retrograde_mood$week <- ifelse(between(retrograde_mood$date, as.Date("2019-11-02"), as.Date("2019-11-21")),
+3, 
+retrograde_mood$week)
 
-         week2 = filter(between(date, as.Date("2019-07-09"), as.Date("2019-08-01"))),
-         week3 = filter(between(date, as.Date("2019-11-02"), as.Date("2019-11-21"))))
-
-
+#create a dataframe that only contains the retrograde weeks
+retrograde_weeks <- retrograde_mood %>% 
+  filter(week != 0)
 ```
 
-
+```{r}
+retrograde_weeks %>%
+  ggplot( aes(x=date, y=ave_mood)) +
+    geom_line( aes(color=name), color="#5e08a8", size=1.5 ) +
+    labs(title = "Daily Mood During Mercury's Retrograde",
+         x = "Day", 
+         y ="Average Daily Mood") +
+    facet_wrap(~week, scales = "free_x")
+```
+I will note, I knew very little about astrology, and nothing about Mercury being in Retrograde in 2019. Do I believe that Mercury caused my emotions to be so turbulent? I can't say so, but it is interesting to look at.
 
 ### Does the school year affect the activities performed?
 
