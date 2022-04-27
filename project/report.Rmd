@@ -7,10 +7,17 @@ output: html_notebook
 
 # Introduction
 
+I use a daily journaling app called "Daylio" to track my mood and activities that I have done throughout the day. In 2019, I made the accomplishment of tracking this every single day of the year (with some days having multiple entries). I've always been interested in the data and visualizations that the app has to offer, from creating a color scale of my mood for a particular month to a weekly recap of what happened. However, not all of my questions could be answered by the app itself. I saw that I could download the data as a .csv file, and from there, my exploration of the data began.
 
-# *Tidying* Up the Data
+The app itself is relatively straightforward: you click one of the "moods" you create (mine included names like "meh", "not good but feel like it should be", etc) (which are inherently factors, even if the app doesn't make it seem like it at first glance!), select activities/traits that apply to your day, and write notes if you would like. 
+For the sake of this report, I omitted the notes I had and created a `mood_scale` (that is a numerical representation of the factors (for ex, multiple moods had the equivalent of a 4/5 so I took this step for my own usability purposes). before uploading the csv file to GitHub. 
 
-Since the data initially came from all years that I have used the app, it is important to make the data tidy and easier to work with.
+As a female in her 20s, it is no surprise that I am familiar with astrology. You may have heard the term that X is happening because ["Mercury is in Retrograde."](https://www.cnn.com/cnn-underscored/health-fitness/mercury-retrograde-2022) While I'm by no means an expert on astrological occurances, I thought it would be fun to do some additional exploration to see if this had any correaltion with my mood. I also want to use other data sets with factors that may affect my mood. I found a [super cool GitHub Repo](https://github.com/Paris778/Retrograde-Mercury-Dates-Dataset-1990-2020) that relates to this topic.
+
+
+# *Tidying* Up the Data {#tag2}
+
+Since the data initially came from all years that I have used the app, it is important to make the data tidy and easier to work with. 
 
 Load necessary packages: 
 ```{r}
@@ -19,7 +26,7 @@ library(lubridate) #date and time
 ```
 
 
-## Working with the Dailyo Data
+## Working with the Dailyo Data {#tag1}
 Import data, which can be found [here](https://github.com/madiyonash/DS_Final_Project/blob/master/data/clean_report.csv):
 ```{r}
 clean_report <- read_csv("C:/Users/madis/Documents/intro to ds/final_project/DS_Final_Project/data/clean_report.csv")
@@ -31,7 +38,7 @@ report_2019 <- clean_report %>%
   filter(between(date, as.Date("2019-01-01"), as.Date("2019-12-31")))
 ```
 
-If you take a glance at the `activities` column, you may notice that the observations have a varying number of activities. Here is a sample of some of the observations:
+If you take a glance at the `activities` column, you may notice that the observations have a varying number of activities. Here is a sample of some of the observations: 
 ```{r}
 #set seed value to birthday of my cat, for giggles
 
@@ -64,13 +71,9 @@ report_2019_day <- report_2019 %>%
 glimpse(report_2019_day)
 ```
 
-## Additional Datasets
+## Mercury in Retrograde
 
-We will also be doing some exploratory data analysis using some other datasets.
-
-### Mercury in Retrograde
-
-The first dataset deals with mercury in retrograde:
+We will additionally be using a dataset that deals with mercury in retrograde. The original file can be found [here](https://github.com/Paris778/Retrograde-Mercury-Dates-Dataset-1990-2020)
 ```{r}
 mercury_in_retrograde <- read_csv("C:/Users/madis/Documents/intro to ds/final_project/DS_Final_Project/data/1990_2020_mercury_retrograde_dataset.csv")
 ```
@@ -81,18 +84,25 @@ mercury_in_retrograde <- mercury_in_retrograde %>%
   filter(between(DATE, as.Date("2019-01-01"), as.Date("2019-12-31")))
 ```
 
-### Average Daily Temperature in Jacksonville
-The next two datasets relate to the weather in Jacksonville in 2019 (where I lived at the time). More specifically, it deals with mean temperature and precipitation.
-```{r}
-avg_daily_temp <- read_csv("C:/Users/madis/Documents/intro to ds/final_project/DS_Final_Project/data/2019_mean_temp.csv")
-```
-
-### Average Daily Precipitation
-```{r}
-avg_daily_rain <- read_csv("C:/Users/madis/Documents/intro to ds/final_project/DS_Final_Project/data/2019_precipitation.csv")
-```
 
 # Data Description
+Now that the data is prepared, let's see what it shows us. 
+
+## Dailyo Data
+In the [Tidying Up the Data section](#tag2), we created a few dataframes from our initial download from the Dailyo app called `clean_report`.
+
+The one we can most relevantly go back to is the `report_2019`, which contains all entries for the year 2019 (which is the focus of this report).
+```{r}
+glimpse(report_2019)
+```
+
+From there, for my own usability purposes, I created two additional dataframes from this report of all 2019 entries. These are `report_2019_sep` and `report_2019_day`
+
+In the `report_2019_sep` data, we have a version of the original dataset, with each observation holding a separate activity category. This was important to do, as seen [earlier](#tag1), that some observations had multiple 
+## Mercury in Retrograde Data
+
+
+
 
 # Exploratory Data Analysis
 
@@ -130,7 +140,8 @@ report_2019_sep %>%
 
 
 ## Bivariate Data Analysis
-Let's try and graph my average daily mood over the course of the year.
+
+First, let's try and graph my average daily mood over the course of the year.
 ```{r}
 report_2019_day %>% 
   ggplot() +
@@ -140,14 +151,12 @@ report_2019_day %>%
 ```
 
 
-Wow, that's turbulent!
+Wow, that's turbulent! This isn't super insightful, so further breaking down the data may help us learn more about it.
 
-Let's see how the months compare:
 
-create a function to find average mood by month
-
-  
+Let's see how my mood during the different months in the year compare.
 ```{r}
+# before we go into looking at the months, create a new dataframe that is easier to work with
 # make additional columns for month and day
 report_2019_months <- report_2019_day %>% 
   mutate(day = format(report_2019_day$date, "%d")) %>% 
@@ -156,6 +165,35 @@ report_2019_months <- report_2019_day %>%
 report_2019_months$day <- as.numeric(report_2019_months$day)
 ```
 
+```{r}
+# create a table that compares monthly averages
+report_2019_day %>% 
+  mutate(day = format(report_2019_day$date, "%d")) %>% 
+  mutate(month = month(ymd(date), label = T)) %>% 
+  select(ave_mood, month, day)
+report_2019_months$day <- as.numeric(report_2019_months$day)
+report_2019_months %>% 
+  group_by(month) %>%
+  summarize(avg_montly_mood = mean(ave_mood), variation = var(ave_mood))
+```
+Here we can see the average mood for the month as a whole, as well as the variation for each month.
+
+To visualize this:
+```{r}
+report_2019_months %>% 
+  ggplot() +
+  geom_boxplot(mapping = aes(
+    x = month,
+    y = ave_mood,
+    color = month)) +
+    labs(title = "Average Mood by Month",
+         y = "Mood Rating",
+         x = "Month") +
+  theme_minimal() +
+  coord_flip()
+```
+
+Above, we take a look at the mean mood for every month. To dig a little deeper, we can see how my daily mood changed over the course of the month:
 ```{r}
 #visualize data
 report_2019_months %>%
@@ -167,7 +205,7 @@ report_2019_months %>%
 ```
 
 
-That's still ugly. Let's try again:
+That's pretty ugly. Since there are so many lines on one chart, it is difficult to compare the trends within each month. Let's try again:
 
 ```{r}
 # try again
@@ -184,6 +222,7 @@ tmp %>%
     facet_wrap(~month)
 ```
 I think that's pretty neat!
+
 ## Data Analysis
 
 # Conclusion
