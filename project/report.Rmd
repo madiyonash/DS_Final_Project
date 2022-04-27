@@ -12,7 +12,7 @@ I use a daily journaling app called "Daylio" to track my mood and activities tha
 The app itself is relatively straightforward: you click one of the "moods" you create (mine included names like "meh", "not good but feel like it should be", etc) (which are inherently factors, even if the app doesn't make it seem like it at first glance!), select activities/traits that apply to your day, and write notes if you would like. 
 For the sake of this report, I omitted the notes I had and created a `mood_scale` (that is a numerical representation of the factors (for ex, multiple moods had the equivalent of a 4/5 so I took this step for my own usability purposes). before uploading the csv file to GitHub. 
 
-As a female in her 20s, it is no surprise that I am familiar with astrology. You may have heard the term that X is happening because ["Mercury is in Retrograde."](https://www.cnn.com/cnn-underscored/health-fitness/mercury-retrograde-2022) While I'm by no means an expert on astrological occurances, I thought it would be fun to do some additional exploration to see if this had any correaltion with my mood. I also want to use other data sets with factors that may affect my mood. I found a [super cool GitHub Repo](https://github.com/Paris778/Retrograde-Mercury-Dates-Dataset-1990-2020) that relates to this topic.
+As a female in her 20s, it is no surprise that I am familiar with astrology. You may have heard the term that X is happening because ["Mercury is in Retrograde."](https://www.cnn.com/cnn-underscored/health-fitness/mercury-retrograde-2022) While I'm by no means an expert on astrological occurrences, I thought it would be fun to do some additional exploration to see if this had any correlation with my mood. I also want to use other data sets with factors that may affect my mood. I found a [super cool GitHub Repo](https://github.com/Paris778/Retrograde-Mercury-Dates-Dataset-1990-2020) that relates to this topic.
 
 
 # *Tidying* Up the Data {#tag2}
@@ -40,9 +40,6 @@ report_2019 <- clean_report %>%
 
 If you take a glance at the `activities` column, you may notice that the observations have a varying number of activities. Here is a sample of some of the observations: 
 ```{r}
-#set seed value to birthday of my cat, for giggles
-
-set.seed(20170601)
 report_2019 %>% 
   select(activities) %>% 
   sample_n(5)
@@ -54,11 +51,6 @@ report_2019_sep <- report_2019 %>%
   separate_rows(activities, sep = "\\|") 
 
 report_2019_sep$activities <- trimws(report_2019_sep$activities, which = c("both"))
-
-#print sample of this report
-report_2019_sep %>% 
-  select(activities) %>% 
-  sample_n(5)
 ```
 
 Additionally, we can create an additional column that summarizes the average the mood per day. This will let us compare the rating of any particular day in 2019 with other factors.
@@ -66,9 +58,6 @@ Additionally, we can create an additional column that summarizes the average the
 report_2019_day <- report_2019 %>% 
   group_by(date) %>% 
   summarize(ave_mood = mean(mood_scale, na.rm=T))
-
-#lets take a look at what this summary looks like
-glimpse(report_2019_day)
 ```
 
 ## Mercury in Retrograde
@@ -91,33 +80,76 @@ Now that the data is prepared, let's see what it shows us.
 ## Dailyo Data
 In the [Tidying Up the Data section](#tag2), we created a few dataframes from our initial download from the Dailyo app called `clean_report`.
 
-The one we can most relevantly go back to is the `report_2019`, which contains all entries for the year 2019 (which is the focus of this report).
+The one we can most relevantly go back to is the `report_2019`, which contains all entries for the year 2019 (which is the focus of this report). 
+
+The features of the original 2019 dataset include:
+
+* date | date format (yyyy/mm/dd)
+* mood | character 
+* activities | character
+* mood scale | number
+
+Let's see what a few of my days looked like:
 ```{r}
-glimpse(report_2019)
+report_2019 %>% 
+  sample_n(10)
 ```
 
 From there, for my own usability purposes, I created two additional dataframes from this report of all 2019 entries. These are `report_2019_sep` and `report_2019_day`
 
-In the `report_2019_sep` data, we have a version of the original dataset, with each observation holding a separate activity category. This was important to do, as seen [earlier](#tag1), that some observations had multiple 
+In the `report_2019_sep` data, we have a version of the original dataset, with each observation holding a separate activity category. This was important to do because, as seen [earlier](#tag1), some observations had multiple activities while some had none at all.
+
+```{r}
+#print sample of this report
+report_2019_sep %>% 
+  sample_n(5)
+```
+This will be helpful when looking at possible correlation related to the activities I have done during different days. 
+
+In the `report_2019_sep` data, we have a simpler dataframe. This only includes the date of the observation and the average mood for that particular day. There are 365 observations of this dataset for the 365 days in the year. Let's take a look at it:
+```{r}
+#print sample of this report
+report_2019_day %>% 
+  sample_n(5)
+```
+This dataframe will be helpful in completing analysis related to the year as a whole. From here, we can look at trends in average daily mood, compare things on a day by day basis (which would be more difficult with some days having multiple entries or differing numbers of activities).
+
 ## Mercury in Retrograde Data
+The Mercury in Retrograde data comes from [this Github Repo](https://github.com/Paris778/Retrograde-Mercury-Dates-Dataset-1990-2020).
 
+Per the Repo:
+"The present dataset consists of two features those being:
 
+* DATE | date format (yyyy/mm/dd)
+* isRetrograde | boolean (0 or 1)
+isRetrograde has a value of 1 (one) when mercury was in retrograde during the respective date and 0 (zero) when it was following a normal course."
+
+The original GitHub Repo also provided a photo of a graphical representation of one of the years (2018) of the data:
+![](https://raw.githubusercontent.com/Paris778/Retrograde-Mercury-Dates-Dataset-1990-2020/main/screenshots/2018_mercury.png)
 
 
 # Exploratory Data Analysis
 
+Before beginning our analysis, let's print a summary of the `report_2019` dataset:
+```{r}
+summary(report_2019)
+```
+This shows that, despite our 365 days in a year, we have 393 observations.
+It is also interesting to note the mood scale: from here, we see that the mean mood for me overall in 2019 was 3.743/5. Not a bad number!
+
 
 ## Univariate Data Analysis
-First, let's see how my year was overall.
+First, let's see how my feelings stacked up by visualizing the distribution of my moods.
 ```{r}
 report_2019 %>% 
   ggplot() +
   geom_bar(mapping = aes(mood_scale)) +
-  labs(title = "Frequency of Moods", x = "Mood", y = "Number of Times Observed") +
+  labs(title = "Distribution of Moods", x = "Mood", y = "Count") +
   theme_minimal()
 ```
 
-Let's see what kinds of things I did over the year.
+
+Next, let's see what kinds of things I did over the year.
 ```{r}
 #find how frequently i did different things
 report_2019_sep %>%
@@ -125,22 +157,25 @@ report_2019_sep %>%
   summarize(count = n()) %>% 
   arrange(desc(count))
 ```
-... It's a bit sad that my most frequent activity was doing homework...
+... It's a bit sad that my most frequent activity was doing homework ...
 
 
 Moving on, let's create a visualization of the frequency I completed different activities:
 ```{r}
 report_2019_sep %>%
   ggplot() +
-  geom_bar(mapping = aes(activities)) +
+  geom_bar(mapping = aes(fct_rev(fct_infreq(activities)), 
+                         fill = activities)) +
   coord_flip() +
   theme_minimal() +
-  labs(title = "Frequency of Activities", x = "Number of Days", y = "Activity")
+  guides(fill="none") +
+  labs(title = "Distribution of Activities", x = "Activity", y = "Count")
 ```
 
 
-## Bivariate Data Analysis
+## Multivariate Data Analysis
 
+### Changes over the Year
 First, let's try and graph my average daily mood over the course of the year.
 ```{r}
 report_2019_day %>% 
@@ -163,15 +198,7 @@ report_2019_months <- report_2019_day %>%
   mutate(month = month(ymd(date), label = T)) %>% 
   select(ave_mood, month, day)
 report_2019_months$day <- as.numeric(report_2019_months$day)
-```
-
-```{r}
-# create a table that compares monthly averages
-report_2019_day %>% 
-  mutate(day = format(report_2019_day$date, "%d")) %>% 
-  mutate(month = month(ymd(date), label = T)) %>% 
-  select(ave_mood, month, day)
-report_2019_months$day <- as.numeric(report_2019_months$day)
+# find average mood by month as well as variation
 report_2019_months %>% 
   group_by(month) %>%
   summarize(avg_montly_mood = mean(ave_mood), variation = var(ave_mood))
@@ -181,19 +208,27 @@ Here we can see the average mood for the month as a whole, as well as the variat
 To visualize this:
 ```{r}
 report_2019_months %>% 
+  group_by(month) %>%
+  summarize(avg_montly_mood = mean(ave_mood), variation = var(ave_mood)) %>% 
   ggplot() +
-  geom_boxplot(mapping = aes(
+  geom_point(aes(
     x = month,
-    y = ave_mood,
+    y = avg_montly_mood,
+    size = 3, 
     color = month)) +
+  ylim(1,5) +
     labs(title = "Average Mood by Month",
          y = "Mood Rating",
          x = "Month") +
-  theme_minimal() +
-  coord_flip()
+  guides(size="none", color = "none") +
+  theme_minimal() 
 ```
+This gives us an idea of how I was doing, by the mean mood, month to month. It was relatively consistent, with the end of the year being slightly lower. 
+A possible explanation for this was the start of senior year of high school, complete with everything from college applications to International Baccalaureate exams!
 
-Above, we take a look at the mean mood for every month. To dig a little deeper, we can see how my daily mood changed over the course of the month:
+
+This, however, does not show us how I was doing within the month itself. 
+Another visualization that we can create could be to show how my mood changed from month to month, comparing the actual changes within the month rather than the mean for the month as a whole.
 ```{r}
 #visualize data
 report_2019_months %>%
@@ -203,8 +238,6 @@ report_2019_months %>%
   labs(x = "Day", y ="Average Daily Mood") +
   theme_minimal()
 ```
-
-
 That's pretty ugly. Since there are so many lines on one chart, it is difficult to compare the trends within each month. Let's try again:
 
 ```{r}
@@ -215,16 +248,97 @@ tmp <- report_2019_months %>%
 tmp %>%
   ggplot( aes(x=day, y=ave_mood)) +
     geom_line( data=tmp %>% dplyr::select(-month), aes(group=month2), color="grey", size=0.5, alpha=0.5) +
-    geom_line( aes(color=month), color="#4e08a8", size=1.2 )+
+    geom_line( aes(color=month), color="#5e08a8", size=1.2 )+
     labs(title = "How Each Month's Daily Mood Compares",
          x = "Day", 
          y ="Average Daily Mood") +
     facet_wrap(~month)
 ```
-I think that's pretty neat!
+I think that's pretty neat! Here, we can see how the average daily mood changed throughout the course of each of the months. Some months were a little more varied than others. 
+
+### Mood and Activities
+
+To see how the average daily mood was affected by individual activities, the `report_2019_sep` can be joined with the `report_2019_day` dataframe. 
+```{r}
+# join average mood to report_2019_sep
+report_2019_activities <- left_join(report_2019_sep, report_2019_day, by = "date")
+```
+
+How does the overall mood of the day compare to the activities done?
+To investigate this, we can find the mean mood for all days an activity is done. 
+```{r}
+report_2019_activities %>% 
+  group_by(activities) %>% 
+  summarize(avg = mean(mood_scale)) %>% 
+  arrange(desc(avg))
+```
+*For context, I used to go to Wawa to hang out with my friends for hours and get food/drinks while we were there. Quality time indicates that I spent time with my boyfriend*
+
+Let's see the 5 highest and lowest mood by activities:
+```{r}
+head(report_2019_activities %>% 
+  group_by(activities) %>% 
+  summarize(avg = mean(mood_scale)) %>% 
+  arrange(desc(avg)))
+tail(report_2019_activities %>% 
+  group_by(activities) %>% 
+  summarize(avg = mean(mood_scale)) %>% 
+  arrange(desc(avg)))
+```
+Overall, it makes sense that activities that relate to hanging out with friends and loved ones correlated with a higher average mood, while things like sick and babysitting ranked lower. 
+
+Let's see this in a visualization!
+```{r}
+report_2019_activities %>% 
+  group_by(activities) %>% 
+  summarize(avg = mean(mood_scale)) %>% 
+  ggplot() +
+  geom_col(aes(x = fct_reorder(activities, avg),
+               y = avg,
+               fill = activities)) +
+  theme_minimal() +
+  labs(title = "Average Daily Mood on Days where an Activity Was Done",
+       x = "Activity",
+       y = "Average Mood") +
+  guides(fill="none") +
+  coord_flip()
+```
+
+Another visualization that we can do that relates to this aspect of the investigation is the *distribution* of mood for each activity. Let's make it:
+```{r}
+# make mood scale temporarily a character
+temp <- report_2019_activities %>% 
+  mutate(mood_scale = as.character(report_2019_activities$mood_scale))
+
+# create visualization
+temp %>% 
+  ggplot(aes(x = fct_rev(fct_infreq(activities)), 
+             fill = mood_scale)) +
+  geom_bar(position = "stack") +
+  labs(y = "Proportion",
+       x = "Activities",
+       title = "Proportion of Daily Mood by Activity",
+       fill = "Daily Mood") +
+  coord_flip()
+```
+This provides some additional insight to the previous visualization of the average daily mood.
+For example, Wawa has the highest average daily mood associated with it, but there are significantly less observations of this activity than there are relax, for example.
+
 
 ## Data Analysis
+Now that we have completed some exploratory data analysis, we can answer some questions about the data. 
 
+### How was my mood during mercury retrograde? 
+
+### Does the school year affect the activities performed?
+
+Earlier, we found that homework was the most frequent activity. Let's see if we can find the approximate time that summer is based on this.
+```{r}
+report_2019_activities %>% 
+  filter(activities == "homework") %>% 
+  ggplot() +
+  geom_point(aes(x = date, y = activities))
+```
 # Conclusion
 
 # Citation of Data

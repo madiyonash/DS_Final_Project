@@ -5,19 +5,39 @@ output: html_notebook
 
 ## Section 1. Introduction
 
-I use a daily journaling app called "Daylio" to track my mood and activities that I have done throughout the day. In 2019, I made the accomplishment of tracking this every single day of the year (with some days having multiple entries). This made me wonder, how has my mood changed over time and if there are any factors that may influence it. 
-I also want to use other data sets with factors that may affect my mood. This includes datasets with information on if mercury is in retrograde (https://github.com/Paris778/Retrograde-Mercury-Dates-Dataset-1990-2020) and weather information in Jacksonville.
+I use a daily journaling app called "Daylio" to track my mood and activities that I have done throughout the day. In 2019, I made the accomplishment of tracking this every single day of the year (with some days having multiple entries). I've always been interested in the data and visualizations that the app has to offer, from creating a color scale of my mood for a particular month to a weekly recap of what happened. However, not all of my questions could be answered by the app itself. I saw that I could download the data as a .csv file, and from there, my exploration of the data began.
+
+As a female in her 20s, it is no surprise that I am familiar with astrology. You may have heard the term that X is happening because ["Mercury is in Retrograde."](https://www.cnn.com/cnn-underscored/health-fitness/mercury-retrograde-2022) While I'm by no means an expert on astrological occurrences, I thought it would be fun to do some additional exploration to see if this had any correlation with my mood. I also want to use other data sets with factors that may affect my mood. I found a [super cool GitHub Repo](https://github.com/Paris778/Retrograde-Mercury-Dates-Dataset-1990-2020) that relates to this topic.
 
 ## Section 2. Data Analysis Plan
 
 - What was my average mood?
 - Were there any activities that had a high correlation to certain moods?
-- How was my mood during mercury retrograde? During rainy weeks? During weeks with high/low temperature?
-- Was my mood better or worse during Holidays? 
+- How was my mood during mercury retrograde? 
+- Was my mood better or worse than my average mood during Holidays? 
+- How did my mood change during the week?
 - Did the school year and events from the school year affect my mood? Was I happier on breaks or while taking classes?
 
 ## Section 3. Data
 
-The data about my mood comes from the app Daylio. Each day, the user is asked to give a mood rating for their day (on a scale from 1-5) of the different "moods" they had added. For example, some of the names I gave my moods included "sick" or "rad." You then can add and select activities that you performed that day. Mine included things like work, soccer games, and if I went shopping. 
-I began working with the data to make it more usable. I used the `recode` function of dplyr in order to give a numerical rating to the mood names to mutate a new variable called `mood_scale`. I also filtered the data to only include data from 2019 to narrow the scope of what I was working with, as this was also the only year where I had observations from every day. I did drop the column that contained my description of what happened that day, but I may reevaluate this choice to see if I choose to include not only the activities I perform but also the description I gave specifically.
-In the analysis, in addition to performing EDA with the data in the dataset, I also wanted to see if I could pull more analysis using other data sets. I found other data sets with things like average temperature and precipitation in Jacksonville (where I lived at the time) as well as some silly ones like when Mercury has been in retrograde. I want to use these to see if I could find any interesting correlation between the numerical representation of my mood and external factors.
+The Dailyo app itself is relatively straightforward: you click one of the "moods" you create (mine included names like "meh", "not good but feel like it should be", etc) (which are inherently factors, even if the app doesn't make it seem like it at first glance!), select activities/traits that apply to your day, and write notes if you would like. 
+For the sake of this report, I omitted the notes I had and created a `mood_scale` (that is a numerical representation of the factors (for ex, multiple moods had the equivalent of a 4/5 so I took this step for my own usability purposes). before uploading the csv file to GitHub.
+
+The features of the dataset include:
+
+* date | date format (yyyy/mm/dd)
+* mood | character 
+* activities | character
+* mood scale | number
+
+The Mercury in Retrograde data comes from [this Github Repo](https://github.com/Paris778/Retrograde-Mercury-Dates-Dataset-1990-2020).
+
+Per the Repo:
+"The present dataset consists of two features those being:
+
+* DATE | date format (yyyy/mm/dd)
+* isRetrograde | boolean (0 or 1)
+isRetrograde has a value of 1 (one) when mercury was in retrograde during the respective date and 0 (zero) when it was following a normal course."
+
+The original GitHub Repo also provided a photo of a graphical representation of one of the years (2018) of the data:
+![](https://raw.githubusercontent.com/Paris778/Retrograde-Mercury-Dates-Dataset-1990-2020/main/screenshots/2018_mercury.png)
